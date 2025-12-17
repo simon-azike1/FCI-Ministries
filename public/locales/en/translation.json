@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "ministries": "Ministries",
+    "sermons": "Sermons",
+    "events": "Events",
+    "give": "Give",
+    "getInvolved": "Get Involved",
+    "contact": "Contact",
+    "resources": "Resources"
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to FCI Ministries Morocco",
+      "subtitle": "A Community of Faith, Hope, and Love",
+      "cta": "Join Us This Sunday"
+    },
+    "serviceTimes": {
+      "title": "Service Times",
+      "sunday": "Sunday Service",
+      "sundayTime": "10:00 AM - 12:00 PM",
+      "prayer": "Prayer Meeting",
+      "prayerTime": "Wednesday 7:00 PM"
+    }
+  },
+  "footer": {
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "followUs": "Follow Us",
+    "copyright": "© 2025 FCI Ministries Morocco. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "retry": "Retry"
+  },
+  "sermons": {
+    "title": "Sermons",
+    "searchPlaceholder": "Search sermons...",
+    "allCategories": "All Categories",
+    "allSpeakers": "All Speakers",
+    "clearFilters": "Clear Filters",
+    "showing": "Showing",
+    "sermons": "sermon(s)",
+    "noSermons": "No sermons found",
+    "errorLoading": "Error loading sermons",
+    "backToList": "Back to Sermon List"
+  }
+}

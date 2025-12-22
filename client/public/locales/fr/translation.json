@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "ministries": "Ministères",
+    "sermons": "Sermons",
+    "events": "Événements",
+    "give": "Donner",
+    "getInvolved": "S'impliquer",
+    "contact": "Contact",
+    "resources": "Ressources"
+  },
+  "home": {
+    "hero": {
+      "title": "Bienvenue aux Ministères FCI Maroc",
+      "subtitle": "Une Communauté de Foi, d'Espoir et d'Amour",
+      "cta": "Rejoignez-nous ce Dimanche"
+    },
+    "serviceTimes": {
+      "title": "Horaires des Services",
+      "sunday": "Service du Dimanche",
+      "sundayTime": "10h00 - 12h00",
+      "prayer": "Réunion de Prière",
+      "prayerTime": "Mercredi 19h00"
+    }
+  },
+  "footer": {
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "Email",
+    "followUs": "Suivez-nous",
+    "copyright": "© 2025 FCI Ministères Maroc. Tous droits réservés."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "search": "Rechercher",
+    "readMore": "Lire Plus",
+    "learnMore": "En Savoir Plus",
+    "retry": "Réessayer"
+  },
+  "sermons": {
+    "title": "Sermons",
+    "searchPlaceholder": "Rechercher des sermons...",
+    "allCategories": "Toutes les Catégories",
+    "allSpeakers": "Tous les Orateurs",
+    "clearFilters": "Effacer les Filtres",
+    "showing": "Affichage de",
+    "sermons": "sermon(s)",
+    "noSermons": "Aucun sermon trouvé",
+    "errorLoading": "Erreur lors du chargement des sermons",
+    "backToList": "Retour à la Liste des Sermons"
+  },
+  "getInvolved": {
+    "title": "S'impliquer",
+    "subtitle": "Dieu vous a créé avec des dons, des passions et un but uniques. Aux Ministères FCI, nous croyons que chacun a une place pour servir et grandir.",
+    "getStarted": "Commencer",
+    "viewMinistries": "Voir les Ministères",
+    "waysToServe": "Façons de Servir",
+    "waysSubtitle": "Trouvez la solution idéale pour vos dons et vos passions",
+    "learnMore": "En Savoir Plus →",
+    "yourJourney": "Votre Parcours",
+    "journeySubtitle": "Un chemin simple pour trouver votre place",
+    "storiesTitle": "Histoires d'Impact",
+    "readyTitle": "Prêt à Franchir la Prochaine Étape?",
+    "readyText": "Nous aimerions vous aider à trouver l'endroit idéal pour servir et grandir. Remplissez notre formulaire d'intérêt ou contactez-nous pour en savoir plus sur l'engagement aux Ministères FCI Maroc.",
+    "contactUs": "Nous Contacter",
+    "viewEvents": "Voir les Événements",
+    "opportunities": {
+      "volunteer": {
+        "title": "Bénévolat",
+        "description": "Servez dans nos ministères et faites une différence chaque semaine"
+      },
+      "smallGroups": {
+        "title": "Rejoindre un Petit Groupe",
+        "description": "Connectez-vous avec d'autres dans une communauté de foi et de croissance"
+      },
+      "ministry": {
+        "title": "Servir dans le Ministère",
+        "description": "Utilisez vos dons et talents pour servir le royaume de Dieu"
+      },
+      "leadership": {
+        "title": "Développement du Leadership",
+        "description": "Grandissez en tant que leader et encadrez d'autres dans leur parcours de foi"
+      }
+    },
+    "steps": {
+      "connect": {
+        "title": "Connecter",
+        "description": "Assistez à notre service du dimanche et à la classe des nouveaux venus"
+      },
+      "discover": {
+        "title": "Découvrir",
+        "description": "Trouvez vos dons et explorez les opportunités de service"
+      },
+      "engage": {
+        "title": "Engager",
+        "description": "Rejoignez une équipe de ministère ou un petit groupe"
+      },
+      "grow": {
+        "title": "Grandir",
+        "description": "Développez vos compétences et ayez un impact"
+      }
+    },
+    "testimonials": {
+      "blessing": "Servir dans le ministère des enfants a été l'une des expériences les plus enrichissantes de ma vie. Voir les enfants rencontrer l'amour de Dieu et les regarder grandir dans la foi est incroyable!",
+      "gradi": "Faire partie de la chorale a transformé mon expérience d'adoration. Utiliser ma voix pour conduire les autres dans la présence de Dieu et créer une belle harmonie avec mes frères et sœurs en Christ m'apporte tant de joie.",
+      "simon": "Servir dans le ministère des médias me permet d'utiliser mes compétences techniques pour le royaume de Dieu. Capturer des moments, diffuser des services et aider les gens à se connecter en ligne a donné à mes talents un but éternel."
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "ministries": "Ministries",
+    "sermons": "Sermons",
+    "events": "Events",
+    "give": "Give",
+    "getInvolved": "Get Involved",
+    "contact": "Contact",
+    "resources": "Resources"
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to FCI Ministries Morocco",
+      "subtitle": "A Community of Faith, Hope, and Love",
+      "cta": "Join Us This Sunday"
+    },
+    "serviceTimes": {
+      "title": "Service Times",
+      "sunday": "Sunday Service",
+      "sundayTime": "10:00 AM - 12:00 PM",
+      "prayer": "Prayer Meeting",
+      "prayerTime": "Wednesday 7:00 PM"
+    }
+  },
+  "footer": {
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "followUs": "Follow Us",
+    "copyright": "© 2025 FCI Ministries Morocco. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "retry": "Retry"
+  },
+  "sermons": {
+    "title": "Sermons",
+    "searchPlaceholder": "Search sermons...",
+    "allCategories": "All Categories",
+    "allSpeakers": "All Speakers",
+    "clearFilters": "Clear Filters",
+    "showing": "Showing",
+    "sermons": "sermon(s)",
+    "noSermons": "No sermons found",
+    "errorLoading": "Error loading sermons",
+    "backToList": "Back to Sermon List"
+  },
+  "getInvolved": {
+    "title": "Get Involved",
+    "subtitle": "God has created you with unique gifts, passions, and purpose. At FCI Ministries, we believe that everyone has a place to serve and grow.",
+    "getStarted": "Get Started",
+    "viewMinistries": "View Ministries",
+    "waysToServe": "Ways to Serve",
+    "waysSubtitle": "Find the perfect fit for your gifts and passions",
+    "learnMore": "Learn More →",
+    "yourJourney": "Your Journey",
+    "journeySubtitle": "A simple path to finding your place",
+    "storiesTitle": "Stories of Impact",
+    "readyTitle": "Ready to Take the Next Step?",
+    "readyText": "We'd love to help you find the perfect place to serve and grow. Fill out our interest form or contact us to learn more about getting involved at FCI Ministries Morocco.",
+    "contactUs": "Contact Us",
+    "viewEvents": "View Events",
+    "opportunities": {
+      "volunteer": {
+        "title": "Volunteer",
+        "description": "Serve in our ministries and make a difference every week"
+      },
+      "smallGroups": {
+        "title": "Join a Small Group",
+        "description": "Connect with others in a community of faith and growth"
+      },
+      "ministry": {
+        "title": "Serve in Ministry",
+        "description": "Use your gifts and talents to serve God's kingdom"
+      },
+      "leadership": {
+        "title": "Leadership Development",
+        "description": "Grow as a leader and mentor others in their faith journey"
+      }
+    },
+    "steps": {
+      "connect": {
+        "title": "Connect",
+        "description": "Attend our Sunday service and newcomer's class"
+      },
+      "discover": {
+        "title": "Discover",
+        "description": "Find your gifts and explore serving opportunities"
+      },
+      "engage": {
+        "title": "Engage",
+        "description": "Join a ministry team or small group"
+      },
+      "grow": {
+        "title": "Grow",
+        "description": "Develop your skills and make an impact"
+      }
+    },
+    "testimonials": {
+      "blessing": "Serving in the children's ministry has been one of the most rewarding experiences of my life. Seeing kids encounter God's love and watching them grow in faith is incredible!",
+      "gradi": "Being part of the choir has transformed my worship experience. Using my voice to lead others into God's presence and creating beautiful harmony with my brothers and sisters in Christ brings me such joy.",
+      "simon": "Serving in media ministry allows me to use my technical skills for God's kingdom. Capturing moments, streaming services, and helping people connect online has given my talents eternal purpose."
+    }
+  }
+}

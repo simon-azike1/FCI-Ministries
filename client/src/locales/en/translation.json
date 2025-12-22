@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "ministries": "Ministries",
+    "sermons": "Sermons",
+    "events": "Events",
+    "give": "Give",
+    "getInvolved": "Get Involved",
+    "contact": "Contact",
+    "resources": "Resources"
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to FCI Ministries Morocco",
+      "subtitle": "A Community of Faith, Hope, and Love",
+      "cta": "Join Us This Sunday"
+    },
+    "serviceTimes": {
+      "title": "Service Times",
+      "sunday": "Sunday Service",
+      "sundayTime": "10:00 AM - 12:00 PM",
+      "prayer": "Prayer Meeting",
+      "prayerTime": "Wednesday 7:00 PM"
+    }
+  },
+  "footer": {
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "followUs": "Follow Us",
+    "copyright": "© 2025 FCI Ministries Morocco. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "retry": "Retry"
+  },
+  "sermons": {
+    "title": "Sermons",
+    "subtitle": "Watch our latest messages and be inspired by the Word of God",
+    "searchPlaceholder": "Search sermons...",
+    "allCategories": "All Categories",
+    "allSpeakers": "All Speakers",
+    "clearFilters": "Clear Filters",
+    "showing": "Showing",
+    "sermon": "sermon",
+    "sermons": "sermons",
+    "noSermons": "No sermons found",
+    "errorLoading": "Error loading sermons",
+    "backToList": "Back to Sermons",
+    "loading": "Loading..."
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Join us for our upcoming events and be part of our community",
+    "allCategories": "All Categories",
+    "clearFilters": "Clear Filters",
+    "showUpcoming": "Upcoming",
+    "showAll": "Show All",
+    "showing": "Showing",
+    "event": "event",
+    "events": "events",
+    "noEvents": "No events found",
+    "errorLoading": "Error loading events",
+    "loading": "Loading...",
+    "spotsLeft": "spots left",
+    "rsvp": "RSVP",
+    "full": "Full",
+    "past": "Past"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Our story, mission, and the people behind FCI Ministries",
+    "ourStory": "Our Story",
+    "storyText1": "FCI Ministries Morocco was founded with a vision to bring the transforming love of Christ to the people of Morocco.",
+    "storyText2": "Today, we remain committed to worship, teaching, outreach, and authentic fellowship.",
+    "beliefs": "What We Believe",
+    "leadership": "Meet Our Leadership",
+    "joinFamily": "Join Our Church Family",
+    "joinText": "We'd love to meet you. Come worship with us or reach out to learn more.",
+    "visitUs": "Visit Us",
+    "contactUs": "Contact Us"
+  }
+}

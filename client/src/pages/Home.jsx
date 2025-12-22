@@ -493,10 +493,10 @@ function Home() {
             variants={staggerContainer}
           >
             {[
-              { emoji: '👶', titleKey: 'childrenMinistry', descKey: 'childrenDesc' },
-              { emoji: '🎸', titleKey: 'youthMinistry', descKey: 'youthDesc' },
-              { emoji: '🎵', titleKey: 'worshipTeam', descKey: 'worshipDesc' },
-              { emoji: '❤️', titleKey: 'outreach', descKey: 'outreachDesc' }
+              { emoji: 'Media', titleKey: 'childrenMinistry', descKey: 'childrenDesc' },
+              { emoji: 'Youth', titleKey: 'youthMinistry', descKey: 'youthDesc' },
+              { emoji: 'Choir', titleKey: 'worshipTeam', descKey: 'worshipDesc' },
+              { emoji: ' House Church', titleKey: 'outreach', descKey: 'outreachDesc' }
             ].map((ministry, index) => (
               <motion.div
                 key={index}

@@ -36,3 +36,12 @@ coverage/
 
 # Old redundant folder (to be deleted manually)
 fci-ministries/
+
+# Large media files (videos should be hosted externally)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+*.flv
+client/public/videos/

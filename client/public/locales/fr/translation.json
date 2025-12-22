@@ -12,7 +12,7 @@
   },
   "home": {
     "hero": {
-      "title": "Bienvenue aux Ministères FCI Maroc",
+      "title": "Bienvenue aux Ministères FCI",
       "subtitle": "Une Communauté de Foi, d'Espoir et d'Amour",
       "cta": "Rejoignez-nous ce Dimanche"
     },
@@ -29,7 +29,7 @@
     "phone": "Téléphone",
     "email": "Email",
     "followUs": "Suivez-nous",
-    "copyright": "© 2025 FCI Ministères Maroc. Tous droits réservés."
+    "copyright": "© 2025 FCI Ministères. Tous droits réservés."
   },
   "common": {
     "loading": "Chargement...",
@@ -68,7 +68,7 @@
     "journeySubtitle": "Un chemin simple pour trouver votre place",
     "storiesTitle": "Histoires d'Impact",
     "readyTitle": "Prêt à Franchir la Prochaine Étape?",
-    "readyText": "Nous aimerions vous aider à trouver l'endroit idéal pour servir et grandir. Remplissez notre formulaire d'intérêt ou contactez-nous pour en savoir plus sur l'engagement aux Ministères FCI Maroc.",
+    "readyText": "Nous aimerions vous aider à trouver l'endroit idéal pour servir et grandir. Remplissez notre formulaire d'intérêt ou contactez-nous pour en savoir plus sur l'engagement aux Ministères FCI.",
     "contactUs": "Nous Contacter",
     "viewEvents": "Voir les Événements",
     "opportunities": {

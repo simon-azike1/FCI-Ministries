@@ -12,7 +12,7 @@
   },
   "home": {
     "hero": {
-      "title": "Welcome to FCI Ministries Morocco",
+      "title": "Welcome to FCI Ministries",
       "subtitle": "A Community of Faith, Hope, and Love",
       "cta": "Join Us This Sunday"
     },
@@ -29,7 +29,7 @@
     "phone": "Phone",
     "email": "Email",
     "followUs": "Follow Us",
-    "copyright": "© 2025 FCI Ministries Morocco. All rights reserved."
+    "copyright": "© 2025 FCI Ministries. All rights reserved."
   },
   "common": {
     "loading": "Loading...",
@@ -68,7 +68,7 @@
     "journeySubtitle": "A simple path to finding your place",
     "storiesTitle": "Stories of Impact",
     "readyTitle": "Ready to Take the Next Step?",
-    "readyText": "We'd love to help you find the perfect place to serve and grow. Fill out our interest form or contact us to learn more about getting involved at FCI Ministries Morocco.",
+    "readyText": "We'd love to help you find the perfect place to serve and grow. Fill out our interest form or contact us to learn more about getting involved at FCI Ministries.",
     "contactUs": "Contact Us",
     "viewEvents": "View Events",
     "opportunities": {

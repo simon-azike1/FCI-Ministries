@@ -1,0 +1,139 @@
+.sermons-page {
+  min-height: 70vh;
+}
+
+/* Featured Sermon */
+.featured-sermon {
+  max-width: 900px;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+.sermon-details {
+  margin-top: var(--spacing-xl);
+}
+
+.sermon-detail-title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.sermon-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--text-base);
+}
+
+.detail-speaker,
+.detail-category {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-weight: var(--font-medium);
+  color: var(--color-gray-700);
+}
+
+.sermon-detail-description {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Filters */
+.sermons-filters {
+  background: var(--color-gray-50);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.filters-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+.search-input,
+.filter-select {
+  padding: var(--spacing-md);
+  border: 2px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  transition: border-color var(--transition-base);
+}
+
+.search-input:focus,
+.filter-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.search-input::placeholder {
+  color: var(--color-gray-500);
+}
+
+/* Results */
+.results-count {
+  font-size: var(--text-base);
+  color: var(--color-gray-600);
+  font-weight: var(--font-medium);
+}
+
+.no-results {
+  padding: var(--spacing-3xl) 0;
+}
+
+/* Sermons Grid */
+.sermons-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+/* Loader */
+.loader {
+  border: 4px solid var(--color-gray-200);
+  border-top: 4px solid var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .filters-row {
+    grid-template-columns: 2fr 1fr 1fr auto;
+  }
+
+  .sermons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .sermons-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .sermon-detail-meta {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .detail-speaker,
+[dir="rtl"] .detail-category {
+  flex-direction: row-reverse;
+}

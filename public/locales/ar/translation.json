@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "about": "حول",
+    "ministries": "الخدمات",
+    "sermons": "العظات",
+    "events": "الفعاليات",
+    "give": "تبرع",
+    "getInvolved": "شارك",
+    "contact": "اتصل بنا",
+    "resources": "الموارد"
+  },
+  "home": {
+    "hero": {
+      "title": "مرحبًا بكم في خدمات FCI المغرب",
+      "subtitle": "مجتمع من الإيمان والأمل والمحبة",
+      "cta": "انضم إلينا هذا الأحد"
+    },
+    "serviceTimes": {
+      "title": "أوقات الخدمة",
+      "sunday": "خدمة الأحد",
+      "sundayTime": "10:00 صباحًا - 12:00 ظهرًا",
+      "prayer": "اجتماع الصلاة",
+      "prayerTime": "الأربعاء 7:00 مساءً"
+    }
+  },
+  "footer": {
+    "address": "العنوان",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "followUs": "تابعنا",
+    "copyright": "© 2025 خدمات FCI المغرب. جميع الحقوق محفوظة."
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "submit": "إرسال",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "search": "بحث",
+    "readMore": "اقرأ المزيد",
+    "learnMore": "اعرف المزيد",
+    "retry": "إعادة المحاولة"
+  },
+  "sermons": {
+    "title": "العظات",
+    "searchPlaceholder": "ابحث عن العظات...",
+    "allCategories": "جميع الفئات",
+    "allSpeakers": "جميع الوعاظ",
+    "clearFilters": "مسح الفلاتر",
+    "showing": "عرض",
+    "sermons": "عظة/عظات",
+    "noSermons": "لا توجد عظات",
+    "errorLoading": "خطأ في تحميل العظات",
+    "backToList": "العودة إلى قائمة العظات"
+  }
+}

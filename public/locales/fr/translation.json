@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "ministries": "Ministères",
+    "sermons": "Sermons",
+    "events": "Événements",
+    "give": "Donner",
+    "getInvolved": "S'impliquer",
+    "contact": "Contact",
+    "resources": "Ressources"
+  },
+  "home": {
+    "hero": {
+      "title": "Bienvenue aux Ministères FCI Maroc",
+      "subtitle": "Une Communauté de Foi, d'Espoir et d'Amour",
+      "cta": "Rejoignez-nous ce Dimanche"
+    },
+    "serviceTimes": {
+      "title": "Horaires des Services",
+      "sunday": "Service du Dimanche",
+      "sundayTime": "10h00 - 12h00",
+      "prayer": "Réunion de Prière",
+      "prayerTime": "Mercredi 19h00"
+    }
+  },
+  "footer": {
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "Email",
+    "followUs": "Suivez-nous",
+    "copyright": "© 2025 FCI Ministères Maroc. Tous droits réservés."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "search": "Rechercher",
+    "readMore": "Lire Plus",
+    "learnMore": "En Savoir Plus",
+    "retry": "Réessayer"
+  },
+  "sermons": {
+    "title": "Sermons",
+    "searchPlaceholder": "Rechercher des sermons...",
+    "allCategories": "Toutes les Catégories",
+    "allSpeakers": "Tous les Orateurs",
+    "clearFilters": "Effacer les Filtres",
+    "showing": "Affichage de",
+    "sermons": "sermon(s)",
+    "noSermons": "Aucun sermon trouvé",
+    "errorLoading": "Erreur lors du chargement des sermons",
+    "backToList": "Retour à la Liste des Sermons"
+  }
+}

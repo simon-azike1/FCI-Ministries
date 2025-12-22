@@ -21,6 +21,7 @@ app.use(helmet());
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:5175',
+  'https://fci-ministries-client.vercel.app',
   process.env.CLIENT_URL
 ].filter(Boolean);
 

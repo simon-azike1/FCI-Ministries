@@ -93,20 +93,15 @@ function About() {
 
       {/* ================= HERO SECTION (VIDEO) ================= */}
      <section className="relative h-[80vh] flex items-center justify-center text-white overflow-hidden">
-      {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/videos/fci-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/fci_worship.jpg"
+          alt="About Us"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
 
       {/* Text Content */}
       <motion.div

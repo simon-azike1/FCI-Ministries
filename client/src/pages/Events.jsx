@@ -142,7 +142,7 @@ function Events() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section with Video Background */}
       <section className="relative h-[80vh] flex items-center justify-center text-white overflow-hidden">
-        {/* Video Background */}
+        {/* Video Background - Cloudinary */}
         <video
           autoPlay
           loop
@@ -150,7 +150,7 @@ function Events() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/videos/churchMeeting.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/djizgbimn/video/upload/event_lelkov.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 

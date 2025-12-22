@@ -97,15 +97,26 @@ function Contact() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary to-orange-600 text-white py-20 text-center overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
+      {/* Hero Section with Background Image */}
+      <section className="relative text-white h-[80vh] flex items-center justify-center text-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="/fci_family.jpg"
+            alt="Contact Us"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        {/* Decorative SVG Pattern Overlay */}
+        <div className="absolute inset-0 opacity-20">
           <svg className="w-full h-full" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
             <path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
           </svg>
         </div>
         <motion.div
-          className="container mx-auto px-4 relative z-10"
+          className="container mx-auto px-4 relative z-10 max-w-4xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -114,12 +125,42 @@ function Contact() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
-            className="inline-block mb-4"
+            className="inline-block mb-6"
           >
-            {/* <span className="text-6xl">📞</span> */}
+            {/* <span className="text-6xl">✉️</span> */}
           </motion.div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 font-serif">{t('contact.title')}</h1>
-          <p className="text-lg md:text-xl lg:text-2xl opacity-95 max-w-3xl mx-auto">{t('contact.subtitle')}</p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-serif drop-shadow-lg">{t('contact.title')}</h1>
+          <p className="text-lg md:text-xl lg:text-2xl opacity-95 max-w-3xl mx-auto mb-6 drop-shadow-md">{t('contact.subtitle')}</p>
+
+          <motion.p
+            className="text-base md:text-lg opacity-90 max-w-2xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            {t('contact.getInTouchText')}
+          </motion.p>
+
+          {/* Quick Contact Links */}
+          <motion.div
+            className="flex flex-wrap justify-center gap-6 mt-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            {/* <div className="flex items-center gap-2 text-base md:text-lg">
+              <span className="text-2xl">📍</span>
+              <span className="opacity-90">123 Church Street, Casablanca</span>
+            </div> */}
+            {/* <div className="flex items-center gap-2 text-base md:text-lg">
+              <span className="text-2xl">📞</span>
+              <span className="opacity-90">+212 XXX XX XX XX</span>
+            </div> */}
+            {/* <div className="flex items-center gap-2 text-base md:text-lg">
+              <span className="text-2xl">⏰</span>
+              <span className="opacity-90">Mon-Fri: 9AM - 5PM</span>
+            </div> */}
+          </motion.div>
         </motion.div>
       </section>
 

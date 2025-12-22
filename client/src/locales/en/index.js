@@ -12,7 +12,7 @@ export default {
   },
   "home": {
     "hero": {
-      "title": "Welcome to FCI Ministries Morocco",
+      "title": "Welcome to FCI Ministries",
       "subtitle": "A Community of Faith, Hope, and Love",
       "cta": "Join Us This Sunday"
     },
@@ -29,7 +29,7 @@ export default {
     "phone": "Phone",
     "email": "Email",
     "followUs": "Follow Us",
-    "copyright": "© 2025 FCI Ministries Morocco. All rights reserved."
+    "copyright": "© 2025 FCI Ministries. All rights reserved."
   },
   "common": {
     "loading": "Loading...",
@@ -81,7 +81,7 @@ export default {
     "title": "About Us",
     "subtitle": "Our story, mission, and the people behind FCI Ministries",
     "ourStory": "Our Story",
-    "storyText1": "FCI Ministries Morocco was founded with a vision to bring the transforming love of Christ to the people of Morocco.",
+    "storyText1": "FCI Ministries was founded with a vision to bring the transforming love of Christ to communities around the world.",
     "storyText2": "Today, we remain committed to worship, teaching, outreach, and authentic fellowship.",
     "beliefs": "What We Believe",
     "leadership": "Meet Our Leadership",
@@ -92,7 +92,7 @@ export default {
   },
   "homeExtended": {
     "welcomeToFCI": "Welcome to FCI Ministries",
-    "communitySubtitle": "A community of faith, hope, and love in Morocco",
+    "communitySubtitle": "A community of faith, hope, and love",
     "joinSunday": "Join Us This Sunday →",
     "serviceTimes": "Service Times",
     "serviceTimesSubtitle": "Join us in worship and fellowship",
@@ -104,7 +104,7 @@ export default {
     "prayerDesc": "Every Wednesday Evening",
     "needDirections": "Need directions?",
     "welcomeHome": "Welcome Home",
-    "welcomeText1": "At FCI Ministries Morocco, we believe church is more than a building—it's a family. Whether you're seeking answers, looking for community, or wanting to deepen your faith, you'll find a welcoming place here.",
+    "welcomeText1": "At FCI Ministries, we believe church is more than a building—it's a family. Whether you're seeking answers, looking for community, or wanting to deepen your faith, you'll find a welcoming place here.",
     "welcomeText2": "Our mission is to glorify God by making disciples who love Jesus, grow in faith, and serve others with compassion. We're passionate about seeing lives transformed by the Gospel and building a vibrant community that reflects God's love.",
     "learnMoreAbout": "Learn More About Us →",
     "upcomingEvents": "Upcoming Events",
@@ -130,7 +130,7 @@ export default {
     "title": "Our Ministries",
     "subtitle": "Find your place to serve and grow",
     "intro": "Discover Your Ministry",
-    "introText": "At FCI Ministries Morocco, we believe that everyone has a place to belong and a purpose to fulfill. Our ministries are designed to help you grow spiritually, connect with others, and serve God's kingdom. Whether you're looking to serve, grow, or connect, there's a place for you here.",
+    "introText": "At FCI Ministries, we believe that everyone has a place to belong and a purpose to fulfill. Our ministries are designed to help you grow spiritually, connect with others, and serve God's kingdom. Whether you're looking to serve, grow, or connect, there's a place for you here.",
     "leader": "Leader",
     "schedule": "Schedule",
     "contact": "Contact",
@@ -165,7 +165,7 @@ export default {
     "getInTouch": "Get In Touch",
     "getInTouchText": "Whether you're new to our church, have questions about our services, or want to get involved, we're here to help. Don't hesitate to reach out!",
     "visitUs": "Visit Us",
-    "address": "123 Church Street\nCasablanca, Morocco",
+    "address": "123 Church Street\nCasablanca",
     "emailUs": "Email Us",
     "callUs": "Call Us",
     "officeHours": "Office Hours",
@@ -174,7 +174,7 @@ export default {
     "socialText": "Follow us on social media to stay updated with our latest events and messages",
     "findUs": "Find Us",
     "mapComingSoon": "Interactive Map Coming Soon",
-    "mapLocation": "Casablanca, Morocco"
+    "mapLocation": "Casablanca"
   },
   "getInvolved": {
     "title": "Get Involved",
@@ -188,7 +188,7 @@ export default {
     "journeySubtitle": "A simple path to finding your place",
     "storiesTitle": "Stories of Impact",
     "readyTitle": "Ready to Take the Next Step?",
-    "readyText": "We'd love to help you find the perfect place to serve and grow. Fill out our interest form or contact us to learn more about getting involved at FCI Ministries Morocco.",
+    "readyText": "We'd love to help you find the perfect place to serve and grow. Fill out our interest form or contact us to learn more about getting involved at FCI Ministries.",
     "contactUs": "Contact Us",
     "viewEvents": "View Events",
     "opportunities": {

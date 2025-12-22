@@ -485,32 +485,41 @@ function Home() {
             </p>
           </motion.div>
 
-          <motion.div 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={staggerContainer}
           >
             {[
-              { emoji: 'Media', titleKey: 'childrenMinistry', descKey: 'childrenDesc' },
-              { emoji: 'Youth', titleKey: 'youthMinistry', descKey: 'youthDesc' },
-              { emoji: 'Choir', titleKey: 'worshipTeam', descKey: 'worshipDesc' },
-              { emoji: ' House Church', titleKey: 'outreach', descKey: 'outreachDesc' }
+              { image: '/fci_child.jpg', titleKey: 'childrenMinistry', descKey: 'childrenDesc' },
+              { image: '/fci_choir.jpg', titleKey: 'worshipTeam', descKey: 'worshipDesc' },
+              { image: '/fci_family.jpg', titleKey: 'outreach', descKey: 'outreachDesc' }
             ].map((ministry, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-50 p-6 rounded-lg text-center"
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
                 variants={scaleIn}
-                whileHover={{ 
-                  y: -8, 
-                  backgroundColor: '#ffffff',
-                  transition: { duration: 0.3 } 
+                whileHover={{
+                  y: -10,
+                  transition: { duration: 0.3 }
                 }}
               >
-                <div className="text-5xl mb-3">{ministry.emoji}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{t(`homeExtended.${ministry.titleKey}`)}</h3>
-                <p className="text-sm text-gray-600">{t(`homeExtended.${ministry.descKey}`)}</p>
+                {/* Ministry Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={ministry.image}
+                    alt={t(`homeExtended.${ministry.titleKey}`)}
+                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                {/* Ministry Content */}
+                <div className="p-6 text-center">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{t(`homeExtended.${ministry.titleKey}`)}</h3>
+                  <p className="text-sm text-gray-600">{t(`homeExtended.${ministry.descKey}`)}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>

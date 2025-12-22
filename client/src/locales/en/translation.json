@@ -12,7 +12,7 @@
   },
   "home": {
     "hero": {
-      "title": "Welcome to FCI Ministries Morocco",
+      "title": "Welcome to FCI Ministries",
       "subtitle": "A Community of Faith, Hope, and Love",
       "cta": "Join Us This Sunday"
     },
@@ -29,7 +29,7 @@
     "phone": "Phone",
     "email": "Email",
     "followUs": "Follow Us",
-    "copyright": "© 2025 FCI Ministries Morocco. All rights reserved."
+    "copyright": "© 2025 FCI Ministries. All rights reserved."
   },
   "common": {
     "loading": "Loading...",
@@ -81,7 +81,7 @@
     "title": "About Us",
     "subtitle": "Our story, mission, and the people behind FCI Ministries",
     "ourStory": "Our Story",
-    "storyText1": "FCI Ministries Morocco was founded with a vision to bring the transforming love of Christ to the people of Morocco.",
+    "storyText1": "FCI Ministries was founded with a vision to bring the transforming love of Christ to communities around the world.",
     "storyText2": "Today, we remain committed to worship, teaching, outreach, and authentic fellowship.",
     "beliefs": "What We Believe",
     "leadership": "Meet Our Leadership",

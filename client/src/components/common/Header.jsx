@@ -63,9 +63,9 @@ function Header() {
           </nav>
 
           {/* Right Side: Language Switcher + Mobile Menu Button */}
-          <div className="flex items-center space-x-2 z-50">
+          <div className="flex items-center space-x-2">
             {/* Modern Language Switcher Dropdown */}
-            <div className="relative">
+            <div className="relative z-50">
               <button
                 onClick={toggleLangMenu}
                 className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors border border-gray-200"
@@ -91,7 +91,7 @@ function Header() {
                   <>
                     {/* Backdrop */}
                     <div
-                      className="fixed inset-0 z-40"
+                      className="fixed inset-0 z-[60]"
                       onClick={() => setLangMenuOpen(false)}
                     />
                     {/* Dropdown */}
@@ -100,7 +100,7 @@ function Header() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50"
+                      className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-[70]"
                     >
                       {LANGUAGES.map((lang) => (
                         <button
@@ -214,8 +214,8 @@ function Header() {
                   transition={{ delay: 0.3 }}
                   className="mt-8 pt-6 border-t border-gray-200"
                 >
-                  <p className="text-sm text-gray-500 text-center mb-4">FCI Ministries Morocco</p>
-                  <p className="text-xs text-gray-400 text-center">A community of faith, hope, and love</p>
+                  <p className="text-sm text-gray-500 text-center mb-4">FCI Ministries</p>
+                  <p className="text-xs text-gray-400 text-center">{t('home.hero.subtitle')}</p>
                 </motion.div>
               </div>
             </motion.nav>

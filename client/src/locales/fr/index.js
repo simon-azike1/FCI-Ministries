@@ -12,7 +12,7 @@ export default {
   },
   "home": {
     "hero": {
-      "title": "Bienvenue aux Ministères FCI Maroc",
+      "title": "Bienvenue aux Ministères FCI",
       "subtitle": "Une Communauté de Foi, d'Espoir et d'Amour",
       "cta": "Rejoignez-nous ce Dimanche"
     },
@@ -29,7 +29,7 @@ export default {
     "phone": "Téléphone",
     "email": "Email",
     "followUs": "Suivez-nous",
-    "copyright": "© 2025 FCI Ministères Maroc. Tous droits réservés."
+    "copyright": "© 2025 FCI Ministères. Tous droits réservés."
   },
   "common": {
     "loading": "Chargement...",
@@ -81,7 +81,7 @@ export default {
     "title": "À Propos",
     "subtitle": "Notre histoire, mission et les personnes derrière FCI Ministères",
     "ourStory": "Notre Histoire",
-    "storyText1": "FCI Ministères Maroc a été fondé avec la vision d'apporter l'amour transformateur du Christ au peuple du Maroc.",
+    "storyText1": "FCI Ministères a été fondé avec la vision d'apporter l'amour transformateur du Christ aux communautés du monde entier.",
     "storyText2": "Aujourd'hui, nous restons engagés dans le culte, l'enseignement, la sensibilisation et la communion authentique.",
     "beliefs": "Ce que nous croyons",
     "leadership": "Rencontrez notre direction",
@@ -92,7 +92,7 @@ export default {
   },
   "homeExtended": {
     "welcomeToFCI": "Bienvenue aux Ministères FCI",
-    "communitySubtitle": "Une communauté de foi, d'espoir et d'amour au Maroc",
+    "communitySubtitle": "Une communauté de foi, d'espoir et d'amour",
     "joinSunday": "Rejoignez-nous ce Dimanche →",
     "serviceTimes": "Horaires des Services",
     "serviceTimesSubtitle": "Rejoignez-nous dans l'adoration et la communion",
@@ -104,7 +104,7 @@ export default {
     "prayerDesc": "Chaque Mercredi Soir",
     "needDirections": "Besoin d'indications?",
     "welcomeHome": "Bienvenue à la Maison",
-    "welcomeText1": "Chez FCI Ministères Maroc, nous croyons que l'église est plus qu'un bâtiment—c'est une famille. Que vous recherchiez des réponses, une communauté ou que vous souhaitiez approfondir votre foi, vous trouverez ici un endroit accueillant.",
+    "welcomeText1": "Chez FCI Ministères, nous croyons que l'église est plus qu'un bâtiment—c'est une famille. Que vous recherchiez des réponses, une communauté ou que vous souhaitiez approfondir votre foi, vous trouverez ici un endroit accueillant.",
     "welcomeText2": "Notre mission est de glorifier Dieu en formant des disciples qui aiment Jésus, grandissent dans la foi et servent les autres avec compassion. Nous sommes passionnés par la transformation des vies par l'Évangile et la construction d'une communauté dynamique qui reflète l'amour de Dieu.",
     "learnMoreAbout": "En Savoir Plus →",
     "upcomingEvents": "Événements à Venir",
@@ -130,7 +130,7 @@ export default {
     "title": "Nos Ministères",
     "subtitle": "Trouvez votre place pour servir et grandir",
     "intro": "Découvrez Votre Ministère",
-    "introText": "Chez FCI Ministères Maroc, nous croyons que chacun a sa place et un but à accomplir. Nos ministères sont conçus pour vous aider à grandir spirituellement, à vous connecter avec les autres et à servir le royaume de Dieu. Que vous cherchiez à servir, grandir ou vous connecter, il y a une place pour vous ici.",
+    "introText": "Chez FCI Ministères, nous croyons que chacun a sa place et un but à accomplir. Nos ministères sont conçus pour vous aider à grandir spirituellement, à vous connecter avec les autres et à servir le royaume de Dieu. Que vous cherchiez à servir, grandir ou vous connecter, il y a une place pour vous ici.",
     "leader": "Responsable",
     "schedule": "Horaire",
     "contact": "Contact",
@@ -165,7 +165,7 @@ export default {
     "getInTouch": "Entrer en Contact",
     "getInTouchText": "Que vous soyez nouveau dans notre église, que vous ayez des questions sur nos services ou que vous souhaitiez vous impliquer, nous sommes là pour vous aider. N'hésitez pas à nous contacter!",
     "visitUs": "Visitez-nous",
-    "address": "123 Rue de l'Église\nCasablanca, Maroc",
+    "address": "123 Rue de l'Église\nCasablanca",
     "emailUs": "Envoyez-nous un Email",
     "callUs": "Appelez-nous",
     "officeHours": "Heures de Bureau",
@@ -174,6 +174,6 @@ export default {
     "socialText": "Suivez-nous sur les réseaux sociaux pour rester informé de nos derniers événements et messages",
     "findUs": "Trouvez-nous",
     "mapComingSoon": "Carte Interactive Bientôt Disponible",
-    "mapLocation": "Casablanca, Maroc"
+    "mapLocation": "Casablanca"
   }
 };

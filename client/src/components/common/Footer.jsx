@@ -207,7 +207,7 @@ function Footer() {
           transition={{ delay: 0.5, duration: 0.6 }}
         >
           <p className="text-gray-400 text-sm text-center md:text-left">
-            © {currentYear} FCI Ministries Morocco. All rights reserved.
+            © {currentYear} FCI Ministries. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <Link to="/privacy" className="text-gray-400 hover:text-primary transition-colors duration-300">

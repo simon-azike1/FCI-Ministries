@@ -169,16 +169,16 @@ function Sermons() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative text-white py-24 md:py-32 overflow-hidden bg-gray-800">
+      <div className="relative text-white h-[80vh] flex items-center justify-center overflow-hidden bg-gray-800">
         <img
           src="/person1.jpg"
           alt="Hero background"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 drop-shadow-lg">{t('sermons.title')}</h1>
-          <p className="text-center text-lg opacity-90 max-w-2xl mx-auto drop-shadow-md">
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">{t('sermons.title')}</h1>
+          <p className="text-lg opacity-90 max-w-2xl mx-auto drop-shadow-md">
             {t('sermons.subtitle')}
           </p>
         </div>

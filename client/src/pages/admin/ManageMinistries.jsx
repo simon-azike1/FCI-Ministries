@@ -168,9 +168,9 @@ function ManageMinistries() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="bg-white rounded-xl shadow-sm p-6 mb-6"
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6"
           >
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
               {editingMinistry ? 'Edit Ministry' : 'Add New Ministry'}
             </h2>
             <form onSubmit={handleSubmit} className="space-y-4">

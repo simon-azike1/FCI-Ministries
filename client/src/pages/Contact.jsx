@@ -96,7 +96,7 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
       {/* Hero Section with Background Image */}
       <section className="relative text-white h-[80vh] flex items-center justify-center text-center overflow-hidden">
         {/* Background Image */}
@@ -165,12 +165,12 @@ function Contact() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900 transition-colors">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div
-              className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 relative overflow-hidden"
+              className="bg-white dark:bg-gray-800 p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 relative overflow-hidden"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -197,10 +197,10 @@ function Contact() {
                   >
                     {/* <span className="text-5xl">✉️</span> */}
                   </motion.div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 font-serif">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 font-serif">
                     {t('contact.sendMessage')}
                   </h2>
-                  <p className="text-gray-600">{t('contact.formSubtitle')}</p>
+                  <p className="text-gray-600 dark:text-gray-300 dark:text-gray-300">{t('contact.formSubtitle')}</p>
                 </motion.div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -211,7 +211,7 @@ function Contact() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.1, duration: 0.5 }}
                   >
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
                       {/* <span className="text-primary">👤</span> */}
                       {t('contact.name')} {t('contact.required')}
                     </label>
@@ -222,7 +222,7 @@ function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white transition-all duration-300 min-h-[44px]"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white dark:focus:bg-gray-600 transition-all duration-300 min-h-[44px] text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
                       placeholder={t('contact.namePlaceholder')}
                     />
                   </motion.div>
@@ -234,7 +234,7 @@ function Contact() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.2, duration: 0.5 }}
                   >
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
                       {/* <span className="text-primary">📧</span> */}
                       {t('contact.email')} {t('contact.required')}
                     </label>
@@ -245,7 +245,7 @@ function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white transition-all duration-300 min-h-[44px]"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white dark:focus:bg-gray-600 transition-all duration-300 min-h-[44px] text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
                       placeholder={t('contact.emailPlaceholder')}
                     />
                   </motion.div>
@@ -257,7 +257,7 @@ function Contact() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.3, duration: 0.5 }}
                   >
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
                       {/* <span className="text-primary">📱</span> */}
                       {t('contact.phone')}
                     </label>
@@ -267,7 +267,7 @@ function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white transition-all duration-300 min-h-[44px]"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white dark:focus:bg-gray-600 transition-all duration-300 min-h-[44px] text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
                       placeholder={t('contact.phonePlaceholder')}
                     />
                   </motion.div>
@@ -279,7 +279,7 @@ function Contact() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.5 }}
                   >
-                    <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                    <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
                       {/* <span className="text-primary">📝</span> */}
                       {t('contact.subject')} {t('contact.required')}
                     </label>
@@ -290,7 +290,7 @@ function Contact() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white transition-all duration-300 min-h-[44px]"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white dark:focus:bg-gray-600 transition-all duration-300 min-h-[44px] text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
                       placeholder={t('contact.subjectPlaceholder')}
                     />
                   </motion.div>
@@ -302,7 +302,7 @@ function Contact() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 0.5 }}
                   >
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
                       {/* <span className="text-primary">💬</span> */}
                       {t('contact.message')} {t('contact.required')}
                     </label>
@@ -314,10 +314,10 @@ function Contact() {
                       required
                       rows="5"
                       maxLength="500"
-                      className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white transition-all duration-300 resize-none"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white dark:focus:bg-gray-600 transition-all duration-300 resize-none text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400"
                       placeholder={t('contact.messagePlaceholder')}
                     ></textarea>
-                    <div className="text-right text-sm text-gray-500 mt-1">
+                    <div className="text-right text-sm text-gray-500 dark:text-gray-400 mt-1">
                       {formData.message.length} / 500 characters
                     </div>
                   </motion.div>
@@ -398,9 +398,9 @@ function Contact() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.8, duration: 0.5 }}
-                  className="mt-8 pt-6 border-t border-gray-200 text-center"
+                  className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700 text-center"
                 >
-                  <p className="text-sm text-gray-600 mb-3">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 dark:text-gray-300 mb-3">
                     {t('contact.privacyText')}
                   </p>
                   <div className="flex justify-center gap-6 text-xs text-gray-500">
@@ -430,8 +430,8 @@ function Contact() {
               variants={staggerContainer}
             >
               <motion.div variants={fadeInUp}>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">{t('contact.getInTouch')}</h2>
-                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 font-serif">{t('contact.getInTouch')}</h2>
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
                   {t('contact.getInTouchText')}
                 </p>
               </motion.div>
@@ -442,9 +442,9 @@ function Contact() {
               >
                 {/* Address */}
                 <motion.div
-                  className="bg-gray-50 p-6 rounded-lg transition-all duration-300"
+                  className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg transition-all duration-300"
                   variants={scaleIn}
-                  whileHover={{ y: -5, backgroundColor: '#ffffff', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)' }}
+                  whileHover={{ y: -5, boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)' }}
                 >
                   <motion.div
                     className="text-4xl mb-3"
@@ -452,17 +452,17 @@ function Contact() {
                   >
                     {/* 📍 */}
                   </motion.div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{t('contact.visitUs')}</h3>
-                  <p className="text-gray-600" style={{ whiteSpace: 'pre-line' }}>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{t('contact.visitUs')}</h3>
+                  <p className="text-gray-600 dark:text-gray-300" style={{ whiteSpace: 'pre-line' }}>
                     {t('contact.address')}
                   </p>
                 </motion.div>
 
                 {/* Email */}
                 <motion.div
-                  className="bg-gray-50 p-6 rounded-lg transition-all duration-300"
+                  className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg transition-all duration-300"
                   variants={scaleIn}
-                  whileHover={{ y: -5, backgroundColor: '#ffffff', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)' }}
+                  whileHover={{ y: -5, boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)' }}
                 >
                   <motion.div
                     className="text-4xl mb-3"
@@ -470,7 +470,7 @@ function Contact() {
                   >
                     {/* 📧 */}
                   </motion.div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{t('contact.emailUs')}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{t('contact.emailUs')}</h3>
                   <a href="mailto:info@fciministries.ma" className="text-primary hover:text-orange-600 transition-colors">
                     info@fciministries.ma
                   </a>
@@ -478,9 +478,9 @@ function Contact() {
 
                 {/* Phone */}
                 <motion.div
-                  className="bg-gray-50 p-6 rounded-lg transition-all duration-300"
+                  className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg transition-all duration-300"
                   variants={scaleIn}
-                  whileHover={{ y: -5, backgroundColor: '#ffffff', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)' }}
+                  whileHover={{ y: -5, boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)' }}
                 >
                   <motion.div
                     className="text-4xl mb-3"
@@ -488,7 +488,7 @@ function Contact() {
                   >
                     {/* 📱 */}
                   </motion.div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{t('contact.callUs')}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{t('contact.callUs')}</h3>
                   <a href="tel:+212600000000" className="text-primary hover:text-orange-600 transition-colors">
                     +212 6XX XX XX XX
                   </a>
@@ -496,9 +496,9 @@ function Contact() {
 
                 {/* Office Hours */}
                 <motion.div
-                  className="bg-gray-50 p-6 rounded-lg transition-all duration-300"
+                  className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg transition-all duration-300"
                   variants={scaleIn}
-                  whileHover={{ y: -5, backgroundColor: '#ffffff', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)' }}
+                  whileHover={{ y: -5, boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)' }}
                 >
                   <motion.div
                     className="text-4xl mb-3"
@@ -506,8 +506,8 @@ function Contact() {
                   >
                     {/* 🕐 */}
                   </motion.div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{t('contact.officeHours')}</h3>
-                  <p className="text-gray-600" style={{ whiteSpace: 'pre-line' }}>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{t('contact.officeHours')}</h3>
+                  <p className="text-gray-600 dark:text-gray-300" style={{ whiteSpace: 'pre-line' }}>
                     {t('contact.officeHoursText')}
                   </p>
                 </motion.div>
@@ -568,10 +568,10 @@ function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors">
         <div className="container mx-auto px-4">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12 font-serif"
+            className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12 font-serif"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -586,13 +586,17 @@ function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="w-full h-96 flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
-              <div className="text-center">
-                <p className="text-6xl mb-4">🗺️</p>
-                <p className="text-gray-600 text-lg font-semibold">{t('contact.mapComingSoon')}</p>
-                <p className="text-gray-500 text-sm mt-2">{t('contact.mapLocation')}</p>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105787.11932176654!2d-6.8498129!3d34.0209149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b871f50c5c1%3A0x7ac946ed7408076b!2sRabat%2C%20Morocco!5e0!3m2!1sen!2sma!4v1234567890123!5m2!1sen!2sma"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="FCI Ministries Location"
+              className="w-full"
+            ></iframe>
           </motion.div>
         </div>
       </section>

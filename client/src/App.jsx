@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { DarkModeProvider } from './contexts/DarkModeContext';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
+import ScrollToTop from './components/common/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Ministries from './pages/Ministries';
@@ -20,7 +22,8 @@ import ProtectedRoute from './components/common/ProtectedRoute';
 
 function App() {
   return (
-    <Router>
+    <DarkModeProvider>
+      <Router>
       <Routes>
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
@@ -58,11 +61,13 @@ function App() {
                 </Routes>
               </main>
               <Footer />
+              <ScrollToTop />
             </div>
           }
         />
       </Routes>
     </Router>
+    </DarkModeProvider>
   );
 }
 

@@ -82,7 +82,7 @@ function Give() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
       {/* Hero Section - Background Image */}
       <section className="relative text-white overflow-hidden">
         {/* Background Image with Overlay */}
@@ -142,7 +142,7 @@ function Give() {
       </section>
 
       {/* Impact Areas - Horizontal Layout */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -152,9 +152,9 @@ function Give() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            {/* <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-serif">Your Impact</h2>
+            {/* <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 font-serif">Your Impact</h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">See how your generosity makes a lasting difference in our church and community</p> */}
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">See how your generosity makes a lasting difference in our church and community</p> */}
           </motion.div>
 
           <motion.div
@@ -192,16 +192,16 @@ function Give() {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-primary"
+                className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-700 dark:to-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-primary"
                 variants={index % 2 === 0 ? slideInLeft : slideInRight}
                 whileHover={{ x: 5 }}
               >
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 mb-3 leading-relaxed text-sm">{item.desc}</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-3 leading-relaxed text-sm">{item.desc}</p>
                   <div className="flex items-baseline gap-2">
                     <span className="text-3xl font-bold text-primary">{item.stat}</span>
-                    <span className="text-gray-500 font-medium text-sm">{item.label}</span>
+                    <span className="text-gray-500 dark:text-gray-400 font-medium text-sm">{item.label}</span>
                   </div>
                 </div>
               </motion.div>
@@ -211,7 +211,7 @@ function Give() {
       </section>
 
       {/* Give Form Section - Enhanced Card Layout */}
-      <section id="give-now" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section id="give-now" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -221,9 +221,9 @@ function Give() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-serif">Make Your Gift</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 font-serif">Make Your Gift</h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600">Every contribution helps us fulfill our mission</p>
+            <p className="text-xl text-gray-600 dark:text-gray-300">Every contribution helps us fulfill our mission</p>
           </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -235,7 +235,7 @@ function Give() {
               viewport={{ once: true }}
               variants={staggerContainer}
             >
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Choose a Category</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Choose a Category</h3>
               <div className="space-y-2">
                 {givingOptions.map((option) => (
                   <motion.button
@@ -243,7 +243,7 @@ function Give() {
                     className={`w-full p-3 rounded-lg text-left transition-all duration-300 border-2 ${
                       selectedCategory === option.id
                         ? 'border-primary bg-primary text-white shadow-lg'
-                        : 'border-gray-200 bg-white text-gray-700 hover:border-primary/30 hover:bg-gray-50'
+                        : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-primary/30 hover:bg-gray-50'
                     }`}
                     onClick={() => setSelectedCategory(option.id)}
                     variants={scaleIn}
@@ -261,7 +261,7 @@ function Give() {
 
             {/* Giving Form - Right Main Area */}
             <motion.div
-              className="lg:col-span-2 bg-white p-8 rounded-2xl shadow-xl border border-gray-100"
+              className="lg:col-span-2 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-100"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -273,7 +273,7 @@ function Give() {
                   className={`flex-1 py-4 rounded-xl text-lg font-bold transition-all ${
                     givingType === 'one-time'
                       ? 'bg-gradient-to-r from-primary to-orange-500 text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200'
                   }`}
                   onClick={() => setGivingType('one-time')}
                   whileHover={{ scale: 1.02 }}
@@ -285,7 +285,7 @@ function Give() {
                   className={`flex-1 py-4 rounded-xl text-lg font-bold transition-all ${
                     givingType === 'recurring'
                       ? 'bg-gradient-to-r from-primary to-orange-500 text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200'
                   }`}
                   onClick={() => setGivingType('recurring')}
                   whileHover={{ scale: 1.02 }}
@@ -297,7 +297,7 @@ function Give() {
 
               {/* Amount Selection */}
               <div className="mb-8">
-                <label className="block text-lg font-bold mb-4 text-gray-900">Select Amount (MAD)</label>
+                <label className="block text-lg font-bold mb-4 text-gray-900 dark:text-white">Select Amount (MAD)</label>
                 <div className="grid grid-cols-3 gap-3 mb-4">
                   {suggestedAmounts.map((amount) => (
                     <motion.button
@@ -305,7 +305,7 @@ function Give() {
                       className={`py-4 rounded-xl text-lg font-bold transition-all ${
                         selectedAmount === amount
                           ? 'bg-primary text-white shadow-lg'
-                          : 'bg-gray-50 text-gray-700 border-2 border-gray-200 hover:border-primary/30'
+                          : 'bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-2 border-gray-200 dark:border-gray-700 hover:border-primary/30'
                       }`}
                       onClick={() => handleAmountClick(amount)}
                       whileHover={{ scale: 1.05, y: -2 }}
@@ -320,26 +320,26 @@ function Give() {
                   placeholder="Or enter custom amount"
                   value={customAmount}
                   onChange={handleCustomAmountChange}
-                  className="w-full py-4 px-6 border-2 border-gray-200 rounded-xl text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  className="w-full py-4 px-6 border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-700 rounded-xl text-lg text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                 />
               </div>
 
               {/* Summary Box */}
-              <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl mb-6 border border-gray-200">
+              <div className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-700 dark:to-gray-800 p-6 rounded-xl mb-6 border border-gray-200 dark:border-gray-600">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-gray-600">Category:</span>
-                  <span className="font-bold text-gray-900">
+                  <span className="text-gray-600 dark:text-gray-300">Category:</span>
+                  <span className="font-bold text-gray-900 dark:text-white">
                     {givingOptions.find(opt => opt.id === selectedCategory)?.title}
                   </span>
                 </div>
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-gray-600">Type:</span>
-                  <span className="font-bold text-gray-900">
+                  <span className="text-gray-600 dark:text-gray-300">Type:</span>
+                  <span className="font-bold text-gray-900 dark:text-white">
                     {givingType === 'one-time' ? 'One-Time Gift' : 'Monthly Recurring'}
                   </span>
                 </div>
-                <div className="flex justify-between items-center pt-4 border-t border-gray-200">
-                  <span className="text-xl font-bold text-gray-900">Total:</span>
+                <div className="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-gray-600">
+                  <span className="text-xl font-bold text-gray-900 dark:text-white">Total:</span>
                   <span className="text-3xl font-bold text-primary">
                     {selectedAmount || customAmount || '0'} MAD
                   </span>
@@ -354,7 +354,7 @@ function Give() {
                 Continue to Secure Payment →
               </motion.button>
 
-              <p className="text-center text-sm text-gray-600 mt-4 flex items-center justify-center gap-2">
+              <p className="text-center text-sm text-gray-600 dark:text-gray-300 mt-4 flex items-center justify-center gap-2">
                 <span className="text-green-600">🔒</span>
                 Secure 256-bit encrypted payment processing
               </p>
@@ -364,10 +364,10 @@ function Give() {
       </section>
 
       {/* Other Ways to Give - Timeline Style */}
-      <section id="other-ways" className="py-20 bg-white">
+      <section id="other-ways" className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4 font-serif"
+            className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-4 font-serif"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -418,16 +418,16 @@ function Give() {
             ].map((method, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-br from-gray-50 to-white p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-primary"
+                className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-700 dark:to-gray-800 p-5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-primary"
                 variants={fadeInUp}
                 whileHover={{ x: 5 }}
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{method.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{method.title}</h3>
                 <div className="space-y-2">
                   {method.details.map((detail, idx) => (
                     <div key={idx} className="flex gap-3">
-                      <span className="text-gray-600 font-medium min-w-[120px] text-sm">{detail.label}:</span>
-                      <span className="text-gray-900 font-semibold text-sm">{detail.value}</span>
+                      <span className="text-gray-700 dark:text-gray-300 font-medium min-w-[120px] text-sm">{detail.label}:</span>
+                      <span className="text-gray-900 dark:text-white font-semibold text-sm">{detail.value}</span>
                     </div>
                   ))}
                 </div>
@@ -438,10 +438,10 @@ function Give() {
       </section>
 
       {/* FAQs - Accordion Style */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors">
         <div className="container mx-auto px-4">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4 font-serif"
+            className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-4 font-serif"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -466,8 +466,8 @@ function Give() {
           >
             {[
               {
-                q: 'Is my donation tax-deductible?',
-                a: 'Yes! FCI Ministries Morocco is a registered non-profit organization. We provide tax receipts for all donations.'
+                q: 'What payment methods do you accept?',
+                a: 'We accept online payments, bank transfers, checks, and mobile money transfers (Orange Money, Maroc Telecom). Choose the option that works best for you.'
               },
               {
                 q: 'How is my donation used?',
@@ -484,15 +484,15 @@ function Give() {
             ].map((faq, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+                className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
                 variants={fadeInUp}
                 whileHover={{ x: 5 }}
               >
-                <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-start gap-2">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 flex items-start gap-2">
                   <span className="text-primary flex-shrink-0">Q:</span>
                   <span>{faq.q}</span>
                 </h3>
-                <p className="text-gray-700 leading-relaxed pl-6 text-sm">{faq.a}</p>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed pl-6 text-sm">{faq.a}</p>
               </motion.div>
             ))}
           </motion.div>

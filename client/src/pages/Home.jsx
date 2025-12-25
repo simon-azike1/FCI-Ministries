@@ -107,7 +107,7 @@ function Home() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
       {/* Hero Section */}
       <section className="relative min-h-[calc(100vh-80px)] h-screen flex items-center justify-center overflow-hidden">
         <div
@@ -148,7 +148,7 @@ function Home() {
       </section>
 
       {/* Service Times Section */}
-<section className="py-20 bg-gradient-to-b from-white via-orange-50/30 to-white relative overflow-hidden">
+<section className="py-20 bg-gradient-to-b from-white via-orange-50/30 to-white dark:from-gray-900 dark:via-gray-800/30 dark:to-gray-900 relative overflow-hidden transition-colors">
   {/* Animated Background Elements */}
   <motion.div 
     className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
@@ -192,10 +192,10 @@ function Home() {
       >
         {/* <span className="text-6xl">🕐</span> */}
       </motion.div>
-      <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4 font-serif">
+      <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-4 font-serif">
         {t('homeExtended.serviceTimes')}
       </h2>
-      <p className="text-center text-gray-600 text-lg">{t('homeExtended.serviceTimesSubtitle')}</p>
+      <p className="text-center text-gray-600 dark:text-gray-300 text-lg">{t('homeExtended.serviceTimesSubtitle')}</p>
     </motion.div>
 
     <motion.div 
@@ -206,8 +206,8 @@ function Home() {
       variants={staggerContainer}
     >
       {/* Sunday Service Card */}
-      <motion.div 
-        className="group relative bg-white p-8 rounded-2xl text-center shadow-lg border-2 border-transparent  overflow-hidden"
+      <motion.div
+        className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl text-center shadow-lg border-2 border-transparent dark:border-gray-700 overflow-hidden"
         variants={scaleIn}
         whileHover={{ y: -8, transition: { duration: 0.3 } }}
       >
@@ -225,14 +225,14 @@ function Home() {
           >
             {/* ⛪ */}
           </motion.div>
-          <h3 className="text-3xl font-bold mb-3 text-gray-900 group-hover:text-white transition-colors duration-300">
+          <h3 className="text-3xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-white transition-colors duration-300">
             {t('homeExtended.sundayService')}
           </h3>
           <div className="h-1 w-16 bg-primary group-hover:bg-white mx-auto mb-4 transition-colors duration-300"></div>
-          <p className="text-2xl font-semibold text-primary group-hover:text-white transition-colors duration-300 mb-2">
+          <p className="text-2xl font-semibold text-primary dark:text-orange-400 group-hover:text-white transition-colors duration-300 mb-2">
             {t('homeExtended.sundayTime')}
           </p>
-          <p className="text-sm text-gray-600 group-hover:text-white/90 transition-colors duration-300">
+          <p className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-white/90 transition-colors duration-300">
             {t('homeExtended.sundayDesc')}
           </p>
         </div>
@@ -242,8 +242,8 @@ function Home() {
       </motion.div>
 
       {/* Prayer Meeting Card */}
-      <motion.div 
-        className="group relative bg-white p-8 rounded-2xl text-center shadow-lg border-2 border-transparent hover:border-orange-600 overflow-hidden"
+      <motion.div
+        className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl text-center shadow-lg border-2 border-transparent dark:border-gray-700 hover:border-orange-600 overflow-hidden"
         variants={scaleIn}
         whileHover={{ y: -8, transition: { duration: 0.3 } }}
       >
@@ -261,14 +261,14 @@ function Home() {
           >
             {/* 🙏 */}
           </motion.div>
-          <h3 className="text-3xl font-bold mb-3 text-gray-900 group-hover:text-white transition-colors duration-300">
+          <h3 className="text-3xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-white transition-colors duration-300">
             {t('homeExtended.prayerMeeting')}
           </h3>
-          <div className="h-1 w-16 bg-orange-600 group-hover:bg-white mx-auto mb-4 transition-colors duration-300"></div>
-          <p className="text-2xl font-semibold text-orange-600 group-hover:text-white transition-colors duration-300 mb-2">
+          <div className="h-1 w-16 bg-orange-600 dark:bg-orange-400 group-hover:bg-white mx-auto mb-4 transition-colors duration-300"></div>
+          <p className="text-2xl font-semibold text-orange-600 dark:text-orange-400 group-hover:text-white transition-colors duration-300 mb-2">
             {t('homeExtended.prayerTime')}
           </p>
-          <p className="text-sm text-gray-600 group-hover:text-white/90 transition-colors duration-300">
+          <p className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-white/90 transition-colors duration-300">
             {t('homeExtended.prayerDesc')}
           </p>
         </div>
@@ -296,7 +296,7 @@ function Home() {
       >
         <Link
           to="/contact"
-          className="inline-flex items-center gap-2 text-primary hover:text-orange-600 font-semibold transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-primary dark:text-orange-400 hover:text-orange-600 dark:hover:text-orange-300 font-semibold transition-colors duration-300"
         >
           <span>{t('homeExtended.needDirections')}</span>
           <motion.span
@@ -313,7 +313,7 @@ function Home() {
 
 
       {/* Welcome Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors">
         <div className="container mx-auto px-4">
           <motion.div 
             className="max-w-4xl mx-auto text-center"
@@ -323,7 +323,7 @@ function Home() {
             variants={staggerContainer}
           >
             <motion.h2
-              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-serif"
+              className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 font-serif"
               variants={fadeInUp}
             >
               {t('homeExtended.welcomeHome')}
@@ -333,13 +333,13 @@ function Home() {
               variants={scaleIn}
             ></motion.div>
             <motion.p
-              className="text-lg text-gray-700 leading-relaxed mb-6"
+              className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6"
               variants={fadeInUp}
             >
               {t('homeExtended.welcomeText1')}
             </motion.p>
             <motion.p
-              className="text-lg text-gray-700 leading-relaxed mb-8"
+              className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8"
               variants={fadeInUp}
             >
               {t('homeExtended.welcomeText2')}
@@ -358,19 +358,19 @@ function Home() {
 
       {/* Upcoming Events Section */}
       {!loading && upcomingEvents.length > 0 && (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white dark:bg-gray-900 transition-colors">
           <div className="container mx-auto px-4">
-            <motion.div 
+            <motion.div
               className="flex justify-between items-center mb-12"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInUp}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-serif">{t('homeExtended.upcomingEvents')}</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white font-serif">{t('homeExtended.upcomingEvents')}</h2>
               <Link
                 to="/events"
-                className="text-primary font-semibold hover:text-orange-600 transition-colors text-lg"
+                className="text-primary dark:text-orange-400 font-semibold hover:text-orange-600 dark:hover:text-orange-300 transition-colors text-lg"
               >
                 {t('homeExtended.viewAll')}
               </Link>
@@ -391,7 +391,7 @@ function Home() {
                 >
                   <Link
                     to="/events"
-                    className="block bg-white border-2 border-gray-200 rounded-lg overflow-hidden  hover:shadow-lg transition-all duration-300"
+                    className="block bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300"
                   >
                     <div className="relative h-48 bg-gradient-to-br from-primary to-orange-600">
                       <div className="absolute inset-0 flex items-center justify-center">
@@ -402,9 +402,9 @@ function Home() {
                       </div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{event.title?.[currentLang] || event.title}</h3>
-                      <p className="text-gray-600 text-sm mb-3 line-clamp-2">{event.description?.[currentLang] || event.description}</p>
-                      <div className="flex items-center text-sm text-gray-500">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{event.title?.[currentLang] || event.title}</h3>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm mb-3 line-clamp-2">{event.description?.[currentLang] || event.description}</p>
+                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                         <span className="mr-2">📍</span>
                         <span>{event.location}</span>
                       </div>
@@ -419,7 +419,7 @@ function Home() {
 
       {/* Recent Sermons Section */}
       {!loading && recentSermons.length > 0 && (
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors">
           <div className="container mx-auto px-4">
             <motion.div 
               className="flex justify-between items-center mb-12"
@@ -428,10 +428,10 @@ function Home() {
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInUp}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-serif">{t('homeExtended.recentSermons')}</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white font-serif">{t('homeExtended.recentSermons')}</h2>
               <Link
                 to="/sermons"
-                className="text-primary font-semibold hover:text-orange-600 transition-colors text-lg"
+                className="text-primary dark:text-orange-400 font-semibold hover:text-orange-600 dark:hover:text-orange-300 transition-colors text-lg"
               >
                 {t('homeExtended.viewAll')}
               </Link>
@@ -447,14 +447,14 @@ function Home() {
               {recentSermons.map((sermon) => (
                 <motion.div
                   key={sermon._id}
-                  className="bg-white p-6 rounded-lg shadow-sm"
+                  className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700"
                   variants={fadeInUp}
                   whileHover={{ y: -8, transition: { duration: 0.3 } }}
                 >
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{sermon.title?.[currentLang] || sermon.title}</h3>
-                  <p className="text-primary font-semibold mb-2">{sermon.speaker}</p>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">{sermon.description?.[currentLang] || sermon.description}</p>
-                  <div className="text-xs text-gray-500">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{sermon.title?.[currentLang] || sermon.title}</h3>
+                  <p className="text-primary dark:text-orange-400 font-semibold mb-2">{sermon.speaker}</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">{sermon.description?.[currentLang] || sermon.description}</p>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">
                     {new Date(sermon.date).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'long',
@@ -469,7 +469,7 @@ function Home() {
       )}
 
       {/* Ministries Preview */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900 transition-colors">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -477,10 +477,10 @@ function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUp}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4 font-serif">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-4 font-serif">
               {t('homeExtended.getInvolved')}
             </h2>
-            <p className="text-center text-gray-600 text-lg mb-12">
+            <p className="text-center text-gray-600 dark:text-gray-300 text-lg mb-12">
               {t('homeExtended.getInvolvedSubtitle')}
             </p>
           </motion.div>
@@ -499,7 +499,7 @@ function Home() {
             ].map((ministry, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
+                className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700"
                 variants={scaleIn}
                 whileHover={{
                   y: -10,
@@ -517,8 +517,8 @@ function Home() {
                 </div>
                 {/* Ministry Content */}
                 <div className="p-6 text-center">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{t(`homeExtended.${ministry.titleKey}`)}</h3>
-                  <p className="text-sm text-gray-600">{t(`homeExtended.${ministry.descKey}`)}</p>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{t(`homeExtended.${ministry.titleKey}`)}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{t(`homeExtended.${ministry.descKey}`)}</p>
                 </div>
               </motion.div>
             ))}
@@ -542,22 +542,32 @@ function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary to-orange-600 text-white text-center">
-        <motion.div 
-          className="container mx-auto px-4"
+      <section className="relative py-20 bg-gradient-to-br from-gray-800 via-gray-900 to-black dark:from-gray-950 dark:to-black text-white text-center overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }}></div>
+        </div>
+
+        <motion.div
+          className="container mx-auto px-4 relative z-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={staggerContainer}
         >
           <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-6 font-serif"
+            className="text-4xl md:text-5xl font-bold mb-6 font-serif text-white"
             variants={fadeInUp}
           >
             {t('homeExtended.readyNextStep')}
           </motion.h2>
           <motion.p
-            className="text-xl mb-8 opacity-95 max-w-3xl mx-auto"
+            className="text-xl mb-8 opacity-95 max-w-3xl mx-auto text-white"
             variants={fadeInUp}
           >
             {t('homeExtended.readyNextStepText')}
@@ -566,18 +576,22 @@ function Home() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             variants={fadeInUp}
           >
-            <Link
-              to="/events"
-              className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-black text-white text-base sm:text-lg font-bold rounded-full hover:bg-gray-100 hover:text-black hover:scale-105 transition-all duration-300 shadow-lg touch-manipulation min-h-[44px]"
-            >
-              {t('homeExtended.planVisit')}
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-block px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white text-base sm:text-lg font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 touch-manipulation min-h-[44px]"
-            >
-              {t('homeExtended.contactUs')}
-            </Link>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                to="/events"
+                className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white text-gray-900 text-base sm:text-lg font-bold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-xl touch-manipulation min-h-[44px]"
+              >
+                {t('homeExtended.planVisit')}
+              </Link>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                to="/contact"
+                className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-base sm:text-lg font-bold rounded-full hover:bg-white/20 hover:border-white/50 transition-all duration-300 touch-manipulation min-h-[44px]"
+              >
+                {t('homeExtended.contactUs')}
+              </Link>
+            </motion.div>
           </motion.div>
         </motion.div>
       </section>

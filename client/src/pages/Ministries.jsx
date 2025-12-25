@@ -151,10 +151,10 @@ function Ministries() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen bg-white dark:bg-gray-900 flex items-center justify-center transition-colors">
         <div className="text-center">
-          <div className="loader inline-block w-12 h-12 border-4 border-gray-200 border-t-primary rounded-full animate-spin"></div>
-          <p className="mt-4 text-gray-600">{t('common.loading') || 'Loading...'}</p>
+          <div className="loader inline-block w-12 h-12 border-4 border-gray-200 dark:border-gray-700 border-t-primary rounded-full animate-spin"></div>
+          <p className="mt-4 text-gray-600 dark:text-gray-300">{t('common.loading') || 'Loading...'}</p>
         </div>
       </div>
     );
@@ -182,7 +182,7 @@ function Ministries() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
       {/* Hero Section - Background Image */}
       <section className="relative text-white overflow-hidden">
         {/* Background Image with Overlay */}
@@ -223,7 +223,7 @@ function Ministries() {
       </section>
 
       {/* Intro Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-gray-900 transition-colors">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto text-center"
@@ -232,8 +232,8 @@ function Ministries() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-serif">{t('ministries.intro')}</h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 font-serif">{t('ministries.intro')}</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               {t('ministries.introText')}
             </p>
           </motion.div>
@@ -241,7 +241,7 @@ function Ministries() {
       </section>
 
       {/* Ministries - Card Grid */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors">
         <div className="container mx-auto px-4">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -291,7 +291,7 @@ function Ministries() {
               return (
                 <motion.div
                   key={ministry._id || ministry.id}
-                  className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300"
+                  className="bg-white dark:bg-gray-800 dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300"
                   variants={slideIn}
                   whileHover={{ y: -5 }}
                 >
@@ -313,7 +313,7 @@ function Ministries() {
                   {/* Content */}
                   <div className="p-5">
                     <div className="mb-4">
-                      <p className="text-gray-700 text-sm leading-relaxed line-clamp-3">
+                      <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed line-clamp-3">
                         {ministryDesc}
                       </p>
                     </div>
@@ -321,17 +321,17 @@ function Ministries() {
                     {/* Leader Info */}
                     <div className="space-y-2 mb-4">
                       <div className="flex items-start gap-2">
-                        <span className="text-gray-500 text-xs font-semibold min-w-[60px]">{t('ministries.leader')}:</span>
-                        <span className="text-gray-900 text-xs font-medium">{ministry.leader}</span>
+                        <span className="text-gray-500 dark:text-gray-400 text-xs font-semibold min-w-[60px]">{t('ministries.leader')}:</span>
+                        <span className="text-gray-900 dark:text-white text-xs font-medium">{ministry.leader}</span>
                       </div>
                       {ministrySchedule && (
                         <div className="flex items-start gap-2">
-                          <span className="text-gray-500 text-xs font-semibold min-w-[60px]">{t('ministries.schedule')}:</span>
-                          <span className="text-gray-900 text-xs font-medium">{ministrySchedule}</span>
+                          <span className="text-gray-500 dark:text-gray-400 text-xs font-semibold min-w-[60px]">{t('ministries.schedule')}:</span>
+                          <span className="text-gray-900 dark:text-white text-xs font-medium">{ministrySchedule}</span>
                         </div>
                       )}
                       <div className="flex items-start gap-2">
-                        <span className="text-gray-500 text-xs font-semibold min-w-[60px]">Email:</span>
+                        <span className="text-gray-500 dark:text-gray-400 text-xs font-semibold min-w-[60px]">Email:</span>
                         <a
                           href={`mailto:${ministryEmail}`}
                           className="text-primary text-xs hover:underline"
@@ -359,15 +359,15 @@ function Ministries() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-white text-center">
+      <section className="py-20 bg-white dark:bg-gray-900 text-center transition-colors">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif text-gray-900">{t('ministries.readyToServe')}</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif text-gray-900 dark:text-white">{t('ministries.readyToServe')}</h2>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
               {t('ministries.readyText')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/get-involved" className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-orange-500 hover:text-black text-white text-base sm:text-lg font-bold rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg touch-manipulation min-h-[44px]">
+              <Link to="/get-involved" className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-orange-500 hover:text-black text-white text-base sm:text-lg font-bold rounded-full hover:bg-white dark:bg-gray-800 hover:scale-105 transition-all duration-300 shadow-lg touch-manipulation min-h-[44px]">
                 {t('ministries.getInvolved')}
               </Link>
               <Link to="/contact" className="inline-block px-6 sm:px-8 py-3 sm:py-4 border-2 border-black text-primary text-base sm:text-lg font-bold rounded-full hover:bg-black hover:text-white transition-all duration-300 touch-manipulation min-h-[44px]">

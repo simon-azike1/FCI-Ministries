@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import sermonService from '../services/sermonService';
 import VideoPlayer from '../components/video/VideoPlayer';
 import SermonCard from '../components/sermon/SermonCard';
+import Loader from '../components/common/Loader';
 
 function Sermons() {
   const { t, i18n } = useTranslation();
@@ -139,16 +140,7 @@ function Sermons() {
   };
 
   if (loading) {
-    return (
-      <div className="py-3xl">
-        <div className="container">
-          <div className="text-center">
-            <div className="loader"></div>
-            <p className="mt-md text-gray">{t('sermons.loading')}</p>
-          </div>
-        </div>
-      </div>
-    );
+    return <Loader fullScreen={true} />;
   }
 
   if (error && sermons.length === 0) {
@@ -167,9 +159,9 @@ function Sermons() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
       {/* Hero Section */}
-      <div className="relative text-white h-[80vh] flex items-center justify-center overflow-hidden bg-gray-800">
+      <div className="relative text-white h-[80vh] flex items-center justify-center overflow-hidden bg-gray-800 dark:bg-gray-950">
         <img
           src="/person1.jpg"
           alt="Hero background"
@@ -193,8 +185,8 @@ function Sermons() {
               title={selectedSermon.title[currentLang]}
             />
             <div className="p-6">
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">{selectedSermon.title[currentLang]}</h2>
-              <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-600">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3">{selectedSermon.title[currentLang]}</h2>
+              <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-600 dark:text-gray-300">
                 {selectedSermon.speaker && (
                   <span className="flex items-center"><span className="mr-1">👤</span> {selectedSermon.speaker}</span>
                 )}
@@ -206,12 +198,12 @@ function Sermons() {
                 )}
               </div>
               {selectedSermon.description?.[currentLang] && (
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                   {selectedSermon.description[currentLang]}
                 </p>
               )}
               <button
-                className="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors font-medium"
+                className="px-6 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors font-medium"
                 onClick={() => setSelectedSermon(null)}
               >
                 ← {t('sermons.backToList')}
@@ -221,18 +213,18 @@ function Sermons() {
         )}
 
         {/* Search and Filters */}
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <input
               type="text"
-              className="col-span-1 md:col-span-2 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="col-span-1 md:col-span-2 px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent placeholder:text-gray-500 dark:placeholder:text-gray-400"
               placeholder={t('sermons.searchPlaceholder')}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
 
             <select
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
@@ -245,7 +237,7 @@ function Sermons() {
             </select>
 
             <select
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               value={selectedSpeaker}
               onChange={(e) => setSelectedSpeaker(e.target.value)}
             >
@@ -270,14 +262,14 @@ function Sermons() {
 
         {/* Sermons Grid */}
         {filteredSermons.length === 0 ? (
-          <div className="bg-white rounded-lg shadow-sm p-12 text-center">
-            <p className="text-gray-500 text-lg">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-12 text-center">
+            <p className="text-gray-500 dark:text-gray-400 text-lg">
               {t('sermons.noSermons')}
             </p>
           </div>
         ) : (
           <>
-            <p className="text-gray-600 mb-4 font-medium">
+            <p className="text-gray-600 dark:text-gray-300 mb-4 font-medium">
               {t('sermons.showing')} {filteredSermons.length} {filteredSermons.length === 1 ? t('sermons.sermon') : t('sermons.sermons')}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

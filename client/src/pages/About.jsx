@@ -89,7 +89,7 @@ function About() {
   };
 
   return (
-    <div className="min-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-hidden bg-white dark:bg-gray-900 transition-colors">
 
       {/* ================= HERO SECTION (VIDEO) ================= */}
      <section className="relative h-[80vh] flex items-center justify-center text-white overflow-hidden">
@@ -111,7 +111,7 @@ function About() {
         transition={{ duration: 0.8 }}
         className="relative z-10 text-center px-4"
       >
-        <h1 className="text-4xl md:text-6xl font-bold font-serif mb-4">
+        <h1 className="text-4xl md:text-6xl font-bold font-serif mb-4 dark:text-white">
           {t('about.title')}
         </h1>
         <p className="max-w-3xl mx-auto text-lg md:text-2xl opacity-90">
@@ -120,7 +120,7 @@ function About() {
       </motion.div>
     </section>
       {/* ================= OUR STORY ================= */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900 transition-colors">
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial="hidden"
@@ -129,12 +129,12 @@ function About() {
             variants={fadeUp}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold font-serif mb-4">{t('about.ourStory')}</h2>
+            <h2 className="text-4xl font-bold font-serif mb-4 dark:text-white">{t('about.ourStory')}</h2>
             <div className="w-20 h-1 bg-primary mb-6" />
-            <p className="text-lg text-gray-700 mb-4">
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
               {t('about.storyText1')}
             </p>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-700 dark:text-gray-300">
               {t('about.storyText2')}
             </p>
           </motion.div>
@@ -153,14 +153,14 @@ function About() {
 
       {/* ================= BELIEFS ================= */}
      {/* ================= BELIEFS ================= */}
-<section className="py-20 bg-gray-50">
+<section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors">
   <div className="container mx-auto px-4">
     <motion.h2
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={fadeUp}
-      className="text-4xl font-bold text-center font-serif mb-12"
+      className="text-4xl font-bold text-center font-serif mb-12 text-gray-900 dark:text-white"
     >
       {t('about.beliefs')}
     </motion.h2>
@@ -173,7 +173,7 @@ function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: index * 0.1 }}
-          className="bg-white rounded-lg shadow-sm hover:shadow-md overflow-hidden"
+          className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md overflow-hidden"
         >
           {/* Image */}
           <img
@@ -184,10 +184,10 @@ function About() {
 
           {/* Content */}
           <div className="p-6 text-center">
-            <h3 className="text-xl font-bold mb-2">
+            <h3 className="text-xl font-bold mb-2 dark:text-white">
               {belief.title}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-gray-300">
               {belief.description}
             </p>
           </div>
@@ -199,9 +199,9 @@ function About() {
 
 
       {/* ================= LEADERSHIP ================= */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900 transition-colors">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center font-serif mb-12">
+          <h2 className="text-4xl font-bold text-center font-serif mb-12 dark:text-white">
             {t('about.leadership')}
           </h2>
 
@@ -213,13 +213,13 @@ function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 }}
-                className="bg-gray-50 rounded-lg overflow-hidden shadow-sm"
+                className="bg-gray-50 dark:bg-gray-800 transition-colors rounded-lg overflow-hidden shadow-sm"
               >
                 <img src={leader.image} alt={leader.name} className="h-64 w-full object-cover" />
                 <div className="p-6 text-center">
-                  <h3 className="font-bold text-lg">{leader.name}</h3>
+                  <h3 className="font-bold text-lg dark:text-white">{leader.name}</h3>
                   <p className="text-primary font-semibold">{leader.role}</p>
-                  <p className="text-sm text-gray-600 mt-2">{leader.bio}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">{leader.bio}</p>
                 </div>
               </motion.div>
             ))}
@@ -228,7 +228,7 @@ function About() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="py-20 bg-gray-50 text-center">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800 text-center transition-colors">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -236,10 +236,10 @@ function About() {
           variants={fadeUp}
           className="container mx-auto px-4"
         >
-          <h2 className="text-4xl font-bold font-serif mb-6">
+          <h2 className="text-4xl font-bold font-serif mb-6 dark:text-white">
             {t('about.joinFamily')}
           </h2>
-          <p className="max-w-2xl mx-auto text-lg text-gray-700 mb-8">
+          <p className="max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-300 mb-8">
             {t('about.joinText')}
           </p>
 

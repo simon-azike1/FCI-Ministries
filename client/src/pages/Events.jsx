@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import eventService from '../services/eventService';
 import EventCard from '../components/event/EventCard';
 import RSVPModal from '../components/event/RSVPModal';
+import Loader from '../components/common/Loader';
 
 function Events() {
   const { t, i18n } = useTranslation();
@@ -111,16 +112,7 @@ function Events() {
   };
 
   if (loading) {
-    return (
-      <div className="py-3xl">
-        <div className="container">
-          <div className="text-center">
-            <div className="loader"></div>
-            <p className="mt-md text-gray">{t('events.loading')}</p>
-          </div>
-        </div>
-      </div>
-    );
+    return <Loader fullScreen={true} />;
   }
 
   if (error && events.length === 0) {
@@ -139,7 +131,7 @@ function Events() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
       {/* Hero Section with Video Background */}
       <section className="relative h-[80vh] flex items-center justify-center text-white overflow-hidden">
         {/* Video Background - Cloudinary */}
@@ -176,7 +168,7 @@ function Events() {
 
       <div className="container mx-auto px-4 py-8">
         {/* Filters */}
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 mb-8">
           <div className="flex flex-wrap gap-4 items-center">
             <select
               className="flex-1 min-w-[200px] px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -215,7 +207,7 @@ function Events() {
 
         {/* Events Grid */}
         {filteredEvents.length === 0 ? (
-          <div className="bg-white rounded-lg shadow-sm p-12 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-12 text-center">
             <p className="text-gray-500 text-lg">
               {t('events.noEvents')}
             </p>

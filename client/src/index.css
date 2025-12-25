@@ -6,6 +6,15 @@
 /* Tailwind CSS is automatically injected by the Vite plugin */
 @import "tailwindcss";
 
+/* Configure dark mode variant for Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
+/* Custom theme colors for Tailwind v4 */
+@theme {
+  --color-primary: #F37021;
+  --color-secondary: #000000;
+}
+
 /* Base styles */
 html {
   scroll-behavior: smooth;

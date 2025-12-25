@@ -114,7 +114,7 @@ function Resources() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary to-orange-600 text-white py-20 text-center overflow-hidden">
         <div className="absolute inset-0 opacity-30">
@@ -132,8 +132,8 @@ function Resources() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-serif">Grow in Your Faith</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mt-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white dark:text-white mb-4 font-serif">Grow in Your Faith</h2>
+            <p className="text-lg text-gray-700 dark:text-gray-300 dark:text-gray-300 leading-relaxed mt-6">
               We've curated a collection of resources to help you grow deeper in your relationship with God.
               Whether you're looking for Bible study materials, devotionals, or spiritual growth tools,
               you'll find helpful resources here to support your journey.
@@ -152,7 +152,7 @@ function Resources() {
                 className={`px-6 py-2 border-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-primary border-primary text-white'
-                    : 'bg-white border-gray-300 text-gray-700 hover:border-primary'
+                    : 'bg-white border-gray-300 dark:border-gray-600 dark:border-gray-600 text-gray-700 dark:text-gray-300 dark:text-gray-300 hover:border-primary'
                 }`}
                 onClick={() => setSelectedCategory(category.id)}
               >
@@ -163,10 +163,10 @@ function Resources() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredResources.map((resource) => (
-              <div key={resource.id} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col">
+              <div key={resource.id} className="bg-white dark:bg-gray-800 dark:bg-gray-800 p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col">
                 <div className="text-5xl mb-4">{resource.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{resource.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed mb-4 flex-1">{resource.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white dark:text-white mb-2">{resource.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 dark:text-gray-300 leading-relaxed mb-4 flex-1">{resource.description}</p>
                 <div className="text-xs text-primary font-semibold uppercase mb-4">{resource.type}</div>
                 <a href={resource.link} className="text-primary font-semibold hover:text-primary-dark hover:underline transition-colors">
                   Access Resource →
@@ -180,8 +180,8 @@ function Resources() {
       {/* Bible Tools Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-4 font-serif">Recommended Bible Tools</h2>
-          <p className="text-center text-gray-600 text-lg mb-12">Free online tools to help you study God's Word</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 dark:text-white dark:text-white mb-4 font-serif">Recommended Bible Tools</h2>
+          <p className="text-center text-gray-600 dark:text-gray-300 dark:text-gray-300 text-lg mb-12">Free online tools to help you study God's Word</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {bibleTools.map((tool, index) => (
@@ -190,11 +190,11 @@ function Resources() {
                 href={tool.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-50 p-6 rounded-lg text-center no-underline text-inherit hover:bg-white hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                className="bg-gray-50 dark:bg-gray-800 dark:bg-gray-800 p-6 rounded-lg text-center no-underline text-inherit hover:bg-white dark:bg-gray-800 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="text-5xl mb-4">{tool.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{tool.name}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed mb-4">{tool.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white dark:text-white mb-2">{tool.name}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 dark:text-gray-300 leading-relaxed mb-4">{tool.description}</p>
                 <span className="text-primary font-semibold text-sm">Visit Website →</span>
               </a>
             ))}
@@ -207,8 +207,8 @@ function Resources() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-serif">Sermon Archive</h2>
-              <p className="text-lg text-gray-700 leading-relaxed my-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white dark:text-white mb-4 font-serif">Sermon Archive</h2>
+              <p className="text-lg text-gray-700 dark:text-gray-300 dark:text-gray-300 leading-relaxed my-6">
                 Access our complete library of sermon messages. Watch or listen to past teachings
                 and revisit messages that impacted you.
               </p>
@@ -242,7 +242,7 @@ function Resources() {
                 placeholder="Enter your email address"
                 className="flex-1 px-4 py-3 border-2 border-white/30 rounded-md text-base bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
               />
-              <button type="submit" className="px-8 py-3 bg-white text-primary font-bold rounded-md hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
+              <button type="submit" className="px-8 py-3 bg-white dark:bg-gray-800 text-primary font-bold rounded-md hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">
                 Subscribe
               </button>
             </form>
@@ -256,36 +256,36 @@ function Resources() {
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-4 font-serif">Frequently Asked Questions</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 dark:text-white dark:text-white mb-4 font-serif">Frequently Asked Questions</h2>
 
           <div className="max-w-4xl mx-auto mt-12">
             <div className="mb-8 pb-8 border-b border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Are these resources free?</h3>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white dark:text-white mb-2">Are these resources free?</h3>
+              <p className="text-base text-gray-700 dark:text-gray-300 dark:text-gray-300 leading-relaxed">
                 Yes! Most of our resources are completely free. Some recommended books or premium
                 resources may have a cost, but we'll always note that clearly.
               </p>
             </div>
 
             <div className="mb-8 pb-8 border-b border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Can I share these resources?</h3>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white dark:text-white mb-2">Can I share these resources?</h3>
+              <p className="text-base text-gray-700 dark:text-gray-300 dark:text-gray-300 leading-relaxed">
                 Absolutely! Feel free to share our resources with friends, family, and your small group.
                 We encourage you to use them for personal and group spiritual growth.
               </p>
             </div>
 
             <div className="mb-8 pb-8 border-b border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">How often do you add new resources?</h3>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white dark:text-white mb-2">How often do you add new resources?</h3>
+              <p className="text-base text-gray-700 dark:text-gray-300 dark:text-gray-300 leading-relaxed">
                 We regularly update our resource library with new content. Check back often or subscribe
                 to our newsletter to stay informed about new additions.
               </p>
             </div>
 
             <div className="mb-8 pb-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Can I request specific resources?</h3>
-              <p className="text-base text-gray-700 leading-relaxed">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white dark:text-white mb-2">Can I request specific resources?</h3>
+              <p className="text-base text-gray-700 dark:text-gray-300 dark:text-gray-300 leading-relaxed">
                 Yes! We'd love to hear from you. Contact us with your suggestions and we'll do our best
                 to provide resources that meet your needs.
               </p>
@@ -295,11 +295,11 @@ function Resources() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50 text-center">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800 text-center">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif text-gray-900">Need Help Finding Resources?</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            <p className="text-lg text-gray-700 dark:text-gray-300 dark:text-gray-300 leading-relaxed mb-8">
               Our team is here to help you find the right resources for your spiritual journey.
               Don't hesitate to reach out with questions or requests.
             </p>

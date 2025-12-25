@@ -40,7 +40,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-secondary text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-secondary dark:from-black dark:via-gray-950 dark:to-gray-900 text-white relative overflow-hidden transition-colors">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-600/5 rounded-full blur-3xl"></div>
@@ -174,14 +174,14 @@ function Footer() {
             </div>
 
             {/* Newsletter Signup */}
-            <div className="bg-gray-800/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 hover:border-primary/50 transition-colors duration-300">
+            <div className="bg-gray-800/50 dark:bg-black/50 backdrop-blur-sm p-5 rounded-xl border border-gray-700 dark:border-gray-800 hover:border-primary/50 transition-colors duration-300">
               <h5 className="font-semibold mb-3 text-sm">📬 Stay Updated</h5>
-              <p className="text-gray-400 text-xs mb-4">Subscribe to our newsletter for updates and events.</p>
+              <p className="text-gray-400 dark:text-gray-500 text-xs mb-4">Subscribe to our newsletter for updates and events.</p>
               <div className="flex gap-2">
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="flex-1 px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors duration-300"
+                  className="flex-1 px-3 py-2 bg-gray-900 dark:bg-black border border-gray-700 dark:border-gray-800 rounded-lg text-sm text-white focus:outline-none focus:border-primary transition-colors duration-300"
                 />
                 <motion.button
                   whileHover={{ scale: 1.05 }}

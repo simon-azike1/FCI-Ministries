@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LANGUAGES } from '../../utils/constants';
+import DarkModeToggle from './DarkModeToggle';
 
 function Header() {
   const { t, i18n } = useTranslation();
@@ -40,13 +41,13 @@ function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50 transition-colors">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 z-50" onClick={closeMobileMenu}>
             <img src="/FCI__Logo-modified.png" alt="FCI Ministries" className="h-12 w-auto" />
-            <span className="text-xl font-bold text-secondary hidden md:block">FCI Ministries</span>
+            <span className="text-xl font-bold text-secondary dark:text-white hidden md:block">FCI Ministries</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -55,28 +56,30 @@ function Header() {
               <Link
                 key={link.path}
                 to={link.path}
-                className="text-gray-700 hover:text-primary font-medium transition-colors"
+                className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
 
-          {/* Right Side: Language Switcher + Mobile Menu Button */}
+          {/* Right Side: Dark Mode + Language Switcher + Mobile Menu Button */}
           <div className="flex items-center space-x-2">
+            {/* Dark Mode Toggle */}
+            <DarkModeToggle />
             {/* Modern Language Switcher Dropdown */}
             <div className="relative z-50">
               <button
                 onClick={toggleLangMenu}
-                className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors border border-gray-200"
+                className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-700"
                 aria-label="Change language"
               >
                 <span className="text-xl">{currentLanguage.flag}</span>
-                <span className="hidden md:block text-sm font-medium text-gray-700">
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                   {currentLanguage.code.toUpperCase()}
                 </span>
                 <svg
-                  className={`w-4 h-4 text-gray-500 transition-transform ${langMenuOpen ? 'rotate-180' : ''}`}
+                  className={`w-4 h-4 text-gray-500 dark:text-gray-400 transition-transform ${langMenuOpen ? 'rotate-180' : ''}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -100,7 +103,7 @@ function Header() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-[70]"
+                      className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden z-[70]"
                     >
                       {LANGUAGES.map((lang) => (
                         <button
@@ -108,8 +111,8 @@ function Header() {
                           onClick={() => changeLanguage(lang.code)}
                           className={`w-full flex items-center space-x-3 px-4 py-3 text-left transition-colors ${
                             i18n.language === lang.code
-                              ? 'bg-orange-50 text-orange-600 font-medium'
-                              : 'text-gray-700 hover:bg-gray-50'
+                              ? 'bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-medium'
+                              : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
                           }`}
                         >
                           <span className="text-2xl">{lang.flag}</span>
@@ -130,7 +133,7 @@ function Header() {
             {/* Mobile Menu Hamburger Button */}
             <button
               onClick={toggleMobileMenu}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               aria-label="Toggle menu"
             >
               <motion.div
@@ -142,21 +145,21 @@ function Header() {
                     closed: { rotate: 0, y: 0 },
                     open: { rotate: 45, y: 8 }
                   }}
-                  className="w-full h-0.5 bg-gray-700 block transition-all origin-center"
+                  className="w-full h-0.5 bg-gray-700 dark:bg-gray-300 block transition-all origin-center"
                 />
                 <motion.span
                   variants={{
                     closed: { opacity: 1 },
                     open: { opacity: 0 }
                   }}
-                  className="w-full h-0.5 bg-gray-700 block"
+                  className="w-full h-0.5 bg-gray-700 dark:bg-gray-300 block"
                 />
                 <motion.span
                   variants={{
                     closed: { rotate: 0, y: 0 },
                     open: { rotate: -45, y: -8 }
                   }}
-                  className="w-full h-0.5 bg-gray-700 block transition-all origin-center"
+                  className="w-full h-0.5 bg-gray-700 dark:bg-gray-300 block transition-all origin-center"
                 />
               </motion.div>
             </button>
@@ -184,7 +187,7 @@ function Header() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl lg:hidden z-40 overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white dark:bg-gray-900 shadow-2xl lg:hidden z-40 overflow-y-auto"
             >
               <div className="p-6 pt-20">
                 {/* Mobile Navigation Links */}
@@ -199,7 +202,7 @@ function Header() {
                       <Link
                         to={link.path}
                         onClick={closeMobileMenu}
-                        className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-primary hover:bg-orange-50 rounded-lg transition-all"
+                        className="block px-4 py-3 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-orange-50 dark:hover:bg-orange-900/30 rounded-lg transition-all"
                       >
                         {link.label}
                       </Link>
@@ -212,10 +215,10 @@ function Header() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
-                  className="mt-8 pt-6 border-t border-gray-200"
+                  className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700"
                 >
-                  <p className="text-sm text-gray-500 text-center mb-4">FCI Ministries</p>
-                  <p className="text-xs text-gray-400 text-center">{t('home.hero.subtitle')}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 text-center mb-4">FCI Ministries</p>
+                  <p className="text-xs text-gray-400 dark:text-gray-500 text-center">{t('home.hero.subtitle')}</p>
                 </motion.div>
               </div>
             </motion.nav>

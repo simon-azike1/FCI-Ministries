@@ -29,7 +29,7 @@ function Footer() {
     {
       name: 'Facebook',
       label: 'Facebook',
-      url: '#',
+      url: 'https://web.facebook.com/FCIMHq1/?_rdc=1&_rdr#',
       color: 'bg-blue-600 hover:bg-blue-500',
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -40,7 +40,7 @@ function Footer() {
     {
       name: 'Instagram',
       label: 'Instagram',
-      url: '#',
+      url: 'https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqblhVSWtIRXhNbkRIMVVGam9ZdlBnb0FtNnBWZ3xBQ3Jtc0treFlqQ2pQTk1rTVdqcDI2a3pMM1lCSlBpaTlUZnhMVHZ5U1Zzb3o3ZUFiU1Foa2MtYWpFM3hRa19VSEdaWnpOdXdHSEc3ejM1ZzJ2RlFZQkFGRlpfMEF1U0dPTlJFdkpkWVNZUWZMeDh1MTY5VENjWQ&q=https%3A%2F%2Fwww.instagram.com%2Ffci_ministries%2F',
       color: 'bg-pink-600 hover:bg-pink-500',
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@ function Footer() {
     {
       name: 'YouTube',
       label: 'YouTube',
-      url: '#',
+      url: 'https://www.youtube.com/@FCI_Ministries',
       color: 'bg-red-600 hover:bg-red-500',
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -62,7 +62,18 @@ function Footer() {
     {
       name: 'Podcast',
       label: 'Podcast',
-      url: '#',
+      url: 'https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqblEyUXNuQWpDYzRTOXZDbS1VRWNrbl8zU3pJUXxBQ3Jtc0tsNGRiWGw1aTVOS2U3RHA0VTEtRGN3RHROc1o5SVJQbnk2Sk9sSERUak82bVJxNUJqVnNneG5Sb29WZ2djcVd3Zkd1cS1mU0JidTgtNVBOZGN2WU51YkJPN2I5QlcxbjVrZ3RlbVRDcWVFUVg0WnMxTQ&q=https%3A%2F%2Fpodcasts.apple.com%2Fus%2Fpodcast%2Fpastor-elliot-n-l-lamptey%2Fid1489086973',
+      color: 'bg-purple-600 hover:bg-purple-500',
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.182c5.423 0 9.818 4.395 9.818 9.818 0 5.423-4.395 9.818-9.818 9.818-5.423 0-9.818-4.395-9.818-9.818 0-5.423 4.395-9.818 9.818-9.818zM12 5.455c-3.614 0-6.545 2.931-6.545 6.545 0 2.388 1.278 4.478 3.182 5.627v-3.445c-.91-.793-1.455-1.95-1.455-3.182 0-2.408 1.955-4.364 4.364-4.364s4.364 1.956 4.364 4.364c0 1.232-.545 2.389-1.455 3.182v3.445c1.904-1.149 3.182-3.239 3.182-5.627 0-3.614-2.931-6.545-6.545-6.545zm0 4.364c-1.204 0-2.182.978-2.182 2.181s.978 2.182 2.182 2.182 2.182-.979 2.182-2.182-.978-2.181-2.182-2.181zm-1.091 5.236v4.8c.346.095.707.145 1.091.145.384 0 .745-.05 1.091-.145v-4.8c-.338.145-.708.236-1.091.236s-.753-.091-1.091-.236z"/>
+        </svg>
+      )
+    },
+    {
+      name: 'Podbean',
+      label: 'Podbean',
+      url: 'https://fcim.podbean.com/',
       color: 'bg-purple-600 hover:bg-purple-500',
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -162,7 +173,7 @@ function Footer() {
                 <div>
                   <p className="font-semibold text-sm text-gray-400 mb-1">{t('footer.address') || 'Address'}</p>
                   <p className="text-gray-300">
-                    Casablanca, Morocco
+                    Rabat , Morocco
                   </p>
                 </div>
               </div>
@@ -183,10 +194,10 @@ function Footer() {
                 <div>
                   <p className="font-semibold text-sm text-gray-400 mb-1">Phone</p>
                   <a 
-                    href="tel:+212123456789" 
+                    href="tel:+212 622-603713" 
                     className="text-gray-300 hover:text-primary transition-colors duration-300"
                   >
-                    +212 123 456 789
+                   +212 622-603713
                   </a>
                 </div>
               </div>

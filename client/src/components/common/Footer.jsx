@@ -122,7 +122,7 @@ function Footer() {
               whileTap={{ scale: 0.95 }}
             >
               <Link
-                to="/about"
+                to="/ministries"
                 className="inline-flex items-center gap-2 text-primary hover:text-orange-400 font-semibold transition-colors duration-300 group"
               >
                 <span>Learn More</span>

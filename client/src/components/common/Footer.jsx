@@ -158,7 +158,7 @@ function Footer() {
             </h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3 group">
-                <span className="text-2xl group-hover:scale-110 transition-transform duration-300">📍</span>
+                {/* <span className="text-2xl group-hover:scale-110 transition-transform duration-300">📍</span> */}
                 <div>
                   <p className="font-semibold text-sm text-gray-400 mb-1">{t('footer.address') || 'Address'}</p>
                   <p className="text-gray-300">
@@ -167,7 +167,7 @@ function Footer() {
                 </div>
               </div>
               <div className="flex items-start gap-3 group">
-                <span className="text-2xl group-hover:scale-110 transition-transform duration-300">✉️</span>
+                {/* <span className="text-2xl group-hover:scale-110 transition-transform duration-300">✉️</span> */}
                 <div>
                   <p className="font-semibold text-sm text-gray-400 mb-1">{t('footer.email') || 'Email'}</p>
                   <a 
@@ -179,7 +179,7 @@ function Footer() {
                 </div>
               </div>
               <div className="flex items-start gap-3 group">
-                <span className="text-2xl group-hover:scale-110 transition-transform duration-300">📞</span>
+                {/* <span className="text-2xl group-hover:scale-110 transition-transform duration-300">📞</span> */}
                 <div>
                   <p className="font-semibold text-sm text-gray-400 mb-1">Phone</p>
                   <a 
@@ -199,20 +199,25 @@ function Footer() {
               <span className="text-primary">▸</span>
               {t('footer.followUs') || 'Follow Us'}
             </h4>
-            <div className="flex flex-wrap gap-2 mb-8">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.url}
-                  aria-label={social.label}
-                  className={`${social.color} px-3 py-2 rounded-lg text-white font-medium text-xs sm:text-sm transition-all duration-300 shadow-lg`}
-                  whileHover={{ y: -3, scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {social.name}
-                </motion.a>
-              ))}
-            </div>
+          <div className="flex flex-wrap gap-3 mb-8">
+  {socialLinks.map((social, index) => (
+    <motion.a
+      key={index}
+      href={social.url}
+      aria-label={social.label}
+      className={`${social.color} p-2.5 rounded-full text-white transition-all duration-300 shadow-lg hover:shadow-2xl relative group`}
+      whileHover={{ y: -3, scale: 1.15 }}
+      whileTap={{ scale: 0.9 }}
+      title={social.name}
+    >
+      <div className="w-4 h-4">
+        {social.icon}
+      </div>
+      {/* Glow effect */}
+      <div className="absolute inset-0 rounded-full bg-white/0 group-hover:bg-white/20 transition-all duration-300"></div>
+    </motion.a>
+  ))}
+</div>
 
             {/* Newsletter Signup */}
             <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 dark:from-black/60 dark:to-gray-950/60 backdrop-blur-sm p-6 rounded-xl border border-gray-700 dark:border-gray-800 hover:border-primary/50 transition-all duration-300 shadow-lg">
@@ -221,16 +226,16 @@ function Footer() {
                 Stay Updated
               </h5>
               <p className="text-gray-300 dark:text-gray-400 text-xs mb-4">Subscribe to our newsletter for updates and events.</p>
-              <div className="flex gap-2">
+              <div className="flex gap-2 w-full">
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="flex-1 px-4 py-2.5 bg-gray-900/80 dark:bg-black/80 border border-gray-600 dark:border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                  className="flex-1 min-w-0 px-4 py-2.5 bg-gray-900/80 dark:bg-black/80 border border-gray-600 dark:border-gray-700 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
                 />
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-5 py-2.5 bg-primary hover:bg-orange-600 rounded-lg font-bold text-white text-sm transition-colors duration-300 shadow-md"
+                  className="flex-shrink-0 px-5 py-2.5 bg-primary hover:bg-orange-600 rounded-lg font-bold text-white text-sm transition-colors duration-300 shadow-md"
                   aria-label="Subscribe"
                 >
                   →

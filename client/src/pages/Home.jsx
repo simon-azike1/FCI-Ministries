@@ -13,7 +13,6 @@ function Home() {
   const [recentSermons, setRecentSermons] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Force re-render when language changes
   const [, forceUpdate] = useState({});
 
   useEffect(() => {
@@ -59,7 +58,6 @@ function Home() {
     }).format(eventDate);
   };
 
-  // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { 
@@ -113,7 +111,8 @@ function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url("/fci image.JPG")',
+            backgroundImage: 'url("/fci image.JPG") ',
+            height: '100%',
           }}
         />
         <div className="absolute inset-0 bg-black/60" />
@@ -148,169 +147,153 @@ function Home() {
       </section>
 
       {/* Service Times Section */}
-<section className="py-20 bg-gradient-to-b from-white via-orange-50/30 to-white dark:from-gray-900 dark:via-gray-800/30 dark:to-gray-900 relative overflow-hidden transition-colors">
-  {/* Animated Background Elements */}
-  <motion.div 
-    className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
-    animate={{
-      scale: [1, 1.2, 1],
-      opacity: [0.3, 0.5, 0.3],
-    }}
-    transition={{
-      duration: 8,
-      repeat: Infinity,
-      ease: "easeInOut"
-    }}
-  ></motion.div>
-  <motion.div 
-    className="absolute bottom-0 left-0 w-96 h-96 bg-orange-300/10 rounded-full blur-3xl"
-    animate={{
-      scale: [1, 1.3, 1],
-      opacity: [0.2, 0.4, 0.2],
-    }}
-    transition={{
-      duration: 10,
-      repeat: Infinity,
-      ease: "easeInOut"
-    }}
-  ></motion.div>
-
-  <div className="container mx-auto px-4 relative z-10">
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-      variants={fadeInUp}
-      className="text-center mb-16"
-    >
-      <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: "backOut" }}
-        className="inline-block mb-4"
-      >
-        {/* <span className="text-6xl">🕐</span> */}
-      </motion.div>
-      <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-4 font-serif">
-        {t('homeExtended.serviceTimes')}
-      </h2>
-      <p className="text-center text-gray-600 dark:text-gray-300 text-lg">{t('homeExtended.serviceTimesSubtitle')}</p>
-    </motion.div>
-
-    <motion.div 
-      className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-      variants={staggerContainer}
-    >
-      {/* Sunday Service Card */}
-      <motion.div
-        className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl text-center shadow-lg border-2 border-transparent dark:border-gray-700 overflow-hidden"
-        variants={scaleIn}
-        whileHover={{ y: -8, transition: { duration: 0.3 } }}
-      >
-        {/* Gradient Background on Hover */}
+      <section className="py-20 bg-gradient-to-b from-white via-orange-50/30 to-white dark:from-gray-900 dark:via-gray-800/30 dark:to-gray-900 relative overflow-hidden transition-colors">
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-primary to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          initial={false}
+          className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
         ></motion.div>
-        
-        {/* Content */}
-        <div className="relative z-10">
-          <motion.div 
-            className="text-7xl mb-6 filter drop-shadow-lg"
-            whileHover={{ rotate: [0, -10, 10, -10, 0], transition: { duration: 0.5 } }}
-          >
-            {/* ⛪ */}
-          </motion.div>
-          <h3 className="text-3xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-white transition-colors duration-300">
-            {t('homeExtended.sundayService')}
-          </h3>
-          <div className="h-1 w-16 bg-primary group-hover:bg-white mx-auto mb-4 transition-colors duration-300"></div>
-          <p className="text-2xl font-semibold text-primary dark:text-orange-400 group-hover:text-white transition-colors duration-300 mb-2">
-            {t('homeExtended.sundayTime')}
-          </p>
-          <p className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-white/90 transition-colors duration-300">
-            {t('homeExtended.sundayDesc')}
-          </p>
-        </div>
-
-        {/* Decorative Corner */}
-        <div className="absolute top-0 right-0 w-20 h-20 bg-primary/10 group-hover:bg-white/20 rounded-bl-full transition-colors duration-300"></div>
-      </motion.div>
-
-      {/* Prayer Meeting Card */}
-      <motion.div
-        className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl text-center shadow-lg border-2 border-transparent dark:border-gray-700 hover:border-orange-600 overflow-hidden"
-        variants={scaleIn}
-        whileHover={{ y: -8, transition: { duration: 0.3 } }}
-      >
-        {/* Gradient Background on Hover */}
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-orange-600 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          initial={false}
+          className="absolute bottom-0 left-0 w-96 h-96 bg-orange-300/10 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
         ></motion.div>
-        
-        {/* Content */}
-        <div className="relative z-10">
-          <motion.div 
-            className="text-7xl mb-6 filter drop-shadow-lg"
-            whileHover={{ scale: [1, 1.2, 1], transition: { duration: 0.5 } }}
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
+            className="text-center mb-16"
           >
-            {/* 🙏 */}
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: "backOut" }}
+              className="inline-block mb-4"
+            >
+            </motion.div>
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-4 font-serif">
+              {t('homeExtended.serviceTimes')}
+            </h2>
+            <p className="text-center text-gray-600 dark:text-gray-300 text-lg">{t('homeExtended.serviceTimesSubtitle')}</p>
           </motion.div>
-          <h3 className="text-3xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-white transition-colors duration-300">
-            {t('homeExtended.prayerMeeting')}
-          </h3>
-          <div className="h-1 w-16 bg-orange-600 dark:bg-orange-400 group-hover:bg-white mx-auto mb-4 transition-colors duration-300"></div>
-          <p className="text-2xl font-semibold text-orange-600 dark:text-orange-400 group-hover:text-white transition-colors duration-300 mb-2">
-            {t('homeExtended.prayerTime')}
-          </p>
-          <p className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-white/90 transition-colors duration-300">
-            {t('homeExtended.prayerDesc')}
-          </p>
-        </div>
 
-        {/* Decorative Corner */}
-        <div className="absolute top-0 right-0 w-20 h-20 bg-orange-600/10 group-hover:bg-white/20 rounded-bl-full transition-colors duration-300"></div>
-      </motion.div>
-    </motion.div>
-
-    {/* Additional Info */}
-    <motion.div
-      className="mt-12 text-center"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.6, duration: 0.6 }}
-    >
-      {/* <p className="text-gray-600 mb-4">
-        <span className="inline-block mr-2">📍</span>
-        <span className="font-medium">FCI Ministries, Morocco</span>
-      </p> */}
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <Link
-          to="/contact"
-          className="inline-flex items-center gap-2 text-primary dark:text-orange-400 hover:text-orange-600 dark:hover:text-orange-300 font-semibold transition-colors duration-300"
-        >
-          <span>{t('homeExtended.needDirections')}</span>
-          <motion.span
-            animate={{ x: [0, 5, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
           >
-            →
-          </motion.span>
-        </Link>
-      </motion.div>
-    </motion.div>
-  </div>
-</section>
+            {/* Sunday Service Card */}
+            <motion.div
+              className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl text-center shadow-lg border-2 border-transparent dark:border-gray-700 overflow-hidden"
+              variants={scaleIn}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+            >
+              <motion.div 
+                className="absolute inset-0 bg-gradient-to-br from-primary to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                initial={false}
+              ></motion.div>
+              
+              <div className="relative z-10">
+                <motion.div 
+                  className="text-7xl mb-6 filter drop-shadow-lg"
+                  whileHover={{ rotate: [0, -10, 10, -10, 0], transition: { duration: 0.5 } }}
+                >
+                </motion.div>
+                <h3 className="text-3xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-white transition-colors duration-300">
+                  {t('homeExtended.sundayService')}
+                </h3>
+                <div className="h-1 w-16 bg-primary group-hover:bg-white mx-auto mb-4 transition-colors duration-300"></div>
+                <p className="text-2xl font-semibold text-primary dark:text-orange-400 group-hover:text-white transition-colors duration-300 mb-2">
+                  {t('homeExtended.sundayTime')}
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-white/90 transition-colors duration-300">
+                  {t('homeExtended.sundayDesc')}
+                </p>
+              </div>
 
+              <div className="absolute top-0 right-0 w-20 h-20 bg-primary/10 group-hover:bg-white/20 rounded-bl-full transition-colors duration-300"></div>
+            </motion.div>
+
+            {/* Prayer Meeting Card */}
+            <motion.div
+              className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl text-center shadow-lg border-2 border-transparent dark:border-gray-700 hover:border-orange-600 overflow-hidden"
+              variants={scaleIn}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+            >
+              <motion.div 
+                className="absolute inset-0 bg-gradient-to-br from-orange-600 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                initial={false}
+              ></motion.div>
+              
+              <div className="relative z-10">
+                <motion.div 
+                  className="text-7xl mb-6 filter drop-shadow-lg"
+                  whileHover={{ scale: [1, 1.2, 1], transition: { duration: 0.5 } }}
+                >
+                </motion.div>
+                <h3 className="text-3xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-white transition-colors duration-300">
+                  {t('homeExtended.prayerMeeting')}
+                </h3>
+                <div className="h-1 w-16 bg-orange-600 dark:bg-orange-400 group-hover:bg-white mx-auto mb-4 transition-colors duration-300"></div>
+                <p className="text-2xl font-semibold text-orange-600 dark:text-orange-400 group-hover:text-white transition-colors duration-300 mb-2">
+                  {t('homeExtended.prayerTime')}
+                </p>
+                <p className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-white/90 transition-colors duration-300">
+                  {t('homeExtended.prayerDesc')}
+                </p>
+              </div>
+
+              <div className="absolute top-0 right-0 w-20 h-20 bg-orange-600/10 group-hover:bg-white/20 rounded-bl-full transition-colors duration-300"></div>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            className="mt-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 text-primary dark:text-orange-400 hover:text-orange-600 dark:hover:text-orange-300 font-semibold transition-colors duration-300"
+              >
+                <span>{t('homeExtended.needDirections')}</span>
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  →
+                </motion.span>
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Welcome Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors">
@@ -477,35 +460,30 @@ function Home() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUp}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-4 font-serif">
-              {t('homeExtended.getInvolved')}
-            </h2>
-            <p className="text-center text-gray-600 dark:text-gray-300 text-lg mb-12">
-              {t('homeExtended.getInvolvedSubtitle')}
-            </p>
           </motion.div>
 
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={staggerContainer}
-          >
-            {[
-              { image: '/fci_child.jpg', titleKey: 'childrenMinistry', descKey: 'childrenDesc' },
-              { image: '/fci_choir.jpg', titleKey: 'worshipTeam', descKey: 'worshipDesc' },
-              { image: '/fci_family.jpg', titleKey: 'outreach', descKey: 'outreachDesc' }
-            ].map((ministry, index) => (
-              <motion.div
-                key={index}
-                className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700"
-                variants={scaleIn}
-                whileHover={{
-                  y: -10,
-                  transition: { duration: 0.3 }
-                }}
-              >
+         <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
+          {[
+            { image: '/fci_child.jpg', titleKey: 'childrenMinistry', descKey: 'childrenDesc', link: '/ministries' },
+            { image: '/fci_choir.jpg', titleKey: 'worshipTeam', descKey: 'worshipDesc', link: '/ministries' },
+            { image: '/fci_family.jpg', titleKey: 'outreach', descKey: 'outreachDesc', link: '/ministries' }
+          ].map((ministry, index) => (
+            <motion.div
+              key={index}
+              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700"
+              variants={scaleIn}
+              whileHover={{
+                y: -10,
+                transition: { duration: 0.3 }
+              }}
+            >
+              <Link to={ministry.link} className="block">
                 {/* Ministry Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -515,35 +493,31 @@ function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
+            
                 {/* Ministry Content */}
                 <div className="p-6 text-center">
                   <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{t(`homeExtended.${ministry.titleKey}`)}</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300">{t(`homeExtended.${ministry.descKey}`)}</p>
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
+              </Link>
+            </motion.div>
+          ))}
 
-          <motion.div 
-            className="text-center mt-10"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInUp}
-          >
-            <Link
-              to="/ministries"
-              className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-primary hover:text-white text-black text-base sm:text-lg font-bold rounded-full hover:bg-orange-600 hover:scale-105 transition-all duration-300 shadow-lg touch-manipulation min-h-[44px]"
-            >
-              {t('homeExtended.exploreMinistries')}
-            </Link>
-          </motion.div>
+        </motion.div>
+
+        <motion.div 
+          className="text-center mt-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+        >
+        </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="relative py-20 bg-gradient-to-br from-gray-800 via-gray-900 to-black dark:from-gray-950 dark:to-black text-white text-center overflow-hidden">
-        {/* Decorative Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl"></div>
         <div className="absolute inset-0 opacity-10">

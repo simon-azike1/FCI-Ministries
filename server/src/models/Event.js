@@ -54,16 +54,17 @@ const eventSchema = new mongoose.Schema({
   category: {
     type: String,
     required: [true, 'Please add a category'],
-    enum: [
-      'service', 'Service',
-      'worship', 'Worship Service',
-      'bible', 'Bible Study',
-      'prayer', 'Prayer Meeting',
-      'youth', 'Youth Event',
-      'outreach', 'Outreach',
-      'conference', 'Conference',
-      'other', 'Other'
-    ]
+    enum: {
+      values: [
+        'service',
+        'prayer',
+        'youth',
+        'conference',
+        'outreach',
+        'other'
+      ],
+      message: '{VALUE} is not a valid category'
+    }
   },
   image: {
     type: String,

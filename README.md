@@ -206,3 +206,6 @@ For support, email support@fciministries.com or join our community.
 ---
 
 **Note**: The `fci-ministries` folder in the root is redundant and can be manually deleted. All necessary files have been moved to the `client` folder.
+
+<img width="1885" height="886" alt="image" src="https://github.com/user-attachments/assets/d50ab6f3-d590-482d-ad53-d68b7a362220" />
+

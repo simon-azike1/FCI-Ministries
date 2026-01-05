@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { FaFacebookF, FaInstagram, FaYoutube, FaPaperPlane } from 'react-icons/fa';
 
 function Footer() {
   const { t } = useTranslation();
@@ -26,9 +27,9 @@ function Footer() {
   };
 
   const socialLinks = [
-    { icon: '📘', label: 'Facebook', url: '#', color: 'hover:text-blue-400' },
-    { icon: '📷', label: 'Instagram', url: '#', color: 'hover:text-pink-400' },
-    { icon: '📹', label: 'YouTube', url: '#', color: 'hover:text-red-400' },
+    { icon: <FaFacebookF />, label: 'Facebook', url: '#', color: 'hover:text-blue-400' },
+    { icon: <FaInstagram />, label: 'Instagram', url: '#', color: 'hover:text-pink-400' },
+    { icon: <FaYoutube />, label: 'YouTube', url: '#', color: 'hover:text-red-400' },
   ];
 
   const quickLinks = [
@@ -164,7 +165,7 @@ function Footer() {
                   key={index}
                   href={social.url}
                   aria-label={social.label}
-                  className={`text-3xl ${social.color} transition-all duration-300 hover:scale-125`}
+                  className={`text-2xl ${social.color} transition-all duration-300 hover:scale-125`}
                   whileHover={{ y: -5, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -186,9 +187,9 @@ function Footer() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-4 py-2 bg-primary hover:bg-orange-600 rounded-lg font-semibold text-sm transition-colors duration-300"
+                  className="px-4 py-2 bg-primary hover:bg-orange-600 rounded-lg font-semibold text-sm transition-colors duration-300 flex items-center justify-center"
                 >
-                  →
+                  <FaPaperPlane />
                 </motion.button>
               </div>
             </div>

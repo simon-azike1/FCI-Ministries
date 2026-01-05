@@ -480,14 +480,13 @@ function Home() {
             variants={staggerContainer}
           >
             {[
-              { emoji: '👶', title: "Children's Ministry", desc: 'Building strong foundations' },
-              { emoji: '🎸', title: 'Youth Ministry', desc: 'Empowering young leaders' },
-              { emoji: '🎵', title: 'Worship Team', desc: 'Leading people in worship' },
-              { emoji: '❤️', title: 'Outreach', desc: 'Serving our community' }
+              { emoji: '👶', title: "Children's Ministry", desc: 'Building strong foundations', path: '/ministries' },
+              { emoji: '🎸', title: 'Youth Ministry', desc: 'Empowering young leaders', path: '/ministries' },
+              { emoji: '🎵', title: 'Worship Team', desc: 'Leading people in worship', path: '/ministries' },
+              { emoji: '❤️', title: 'Outreach', desc: 'Serving our community', path: '/ministries' }
             ].map((ministry, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-50 p-6 rounded-lg text-center"
                 variants={scaleIn}
                 whileHover={{ 
                   y: -8, 
@@ -495,9 +494,14 @@ function Home() {
                   transition: { duration: 0.3 } 
                 }}
               >
-                <div className="text-5xl mb-3">{ministry.emoji}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{ministry.title}</h3>
-                <p className="text-sm text-gray-600">{ministry.desc}</p>
+                <Link
+                  to={ministry.path}
+                  className="block bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300"
+                >
+                  <div className="text-5xl mb-3">{ministry.emoji}</div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{ministry.title}</h3>
+                  <p className="text-sm text-gray-600">{ministry.desc}</p>
+                </Link>
               </motion.div>
             ))}
           </motion.div>

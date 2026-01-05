@@ -30,7 +30,7 @@ function About() {
  {
   name: 'Elliot Lamptey',
   role: 'Pastor',
-  image: 'https://scontent.fcmn1-1.fna.fbcdn.net/v/t51.82787-15/600022844_18097310674884407_729885962315168550_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFDAXNcTxrFJd9pw8Vjg3lX5zHYBI8qo67nMdgEjyqjriwbWvl_4eqPv9KdaiECILXT2DLIF9VL_TQP_9796p1T&_nc_ohc=GzcOX8o6Hw4Q7kNvwEtcyKt&_nc_oc=AdncmbDgYEnwYB-nSaUKkyxSsoOMTZW5ebLQHVgB8qHva00LlM3wxbCnR6h5fX23Qyc&_nc_zt=23&_nc_ht=scontent.fcmn1-1.fna&_nc_gid=sPalaLyqomdIo6REyOkKhw&oh=00_AfloLXGmaivqqIae5zmkX6opeTakFYyYDT3uYOYkgzsidw&oe=6954B09B',
+  image: './leader15.jpg',
   bio: "Dedicated spiritual leader and visionary pastor, committed to guiding the congregation with wisdom, compassion, and a heart for worship, discipleship, and community impact.",
   whatsapp: '212622603713',
   linkedin: 'https://web.facebook.com/elliot.lamptey.5',
